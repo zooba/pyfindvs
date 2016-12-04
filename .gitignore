@@ -77,3 +77,4 @@ UpgradeLog*.htm
 __pycache__
 *.pyd
 *.dll
+*.egg-info/*
