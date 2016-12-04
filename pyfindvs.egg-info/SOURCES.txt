@@ -1,0 +1,10 @@
+README
+setup.cfg
+setup.py
+pyfindvs/Microsoft.VisualStudio.Setup.Configuration.Native.dll
+pyfindvs/__init__.py
+pyfindvs/pyfindvs.cpp
+pyfindvs.egg-info/PKG-INFO
+pyfindvs.egg-info/SOURCES.txt
+pyfindvs.egg-info/dependency_links.txt
+pyfindvs.egg-info/top_level.txt
