@@ -1,0 +1,545 @@
+Build started 03Dec2016 173758.
+Overriding target "GetFrameworkPaths" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "GetFrameworkPaths" from project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.NetFramework.CurrentVersion.targets".
+Overriding target "SatelliteDllsProjectOutputGroup" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "SatelliteDllsProjectOutputGroup" from project "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.WinFx.targets".
+Overriding target "GenerateTargetFrameworkMonikerAttribute" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "GenerateTargetFrameworkMonikerAttribute" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets".
+Overriding target "Build" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "Build" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets".
+Overriding target "Rebuild" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "Rebuild" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets".
+Overriding target "AfterBuild" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "AfterBuild" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets".
+Overriding target "PrepareForBuild" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "PrepareForBuild" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "GetTargetPath" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "GetTargetPath" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "ComputeIntermediateSatelliteAssemblies" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "ComputeIntermediateSatelliteAssemblies" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "ClCompile" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "ClCompile" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "ResourceCompile" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "ResourceCompile" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "Lib" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "Lib" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "Link" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "Link" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "AllProjectOutputGroups" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "AllProjectOutputGroups" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "BuiltProjectOutputGroup" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "BuiltProjectOutputGroup" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "DebugSymbolsProjectOutputGroup" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "DebugSymbolsProjectOutputGroup" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "DocumentationProjectOutputGroup" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "DocumentationProjectOutputGroup" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "SourceFilesProjectOutputGroup" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "SourceFilesProjectOutputGroup" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "ContentFilesProjectOutputGroup" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "ContentFilesProjectOutputGroup" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "AllProjectOutputGroupsDependencies" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "AllProjectOutputGroupsDependencies" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "BuiltProjectOutputGroupDependencies" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "BuiltProjectOutputGroupDependencies" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "DebugSymbolsProjectOutputGroupDependencies" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "DebugSymbolsProjectOutputGroupDependencies" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "DocumentationProjectOutputGroupDependencies" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "DocumentationProjectOutputGroupDependencies" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets".
+Overriding target "PreBuildEvent" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "PreBuildEvent" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "PostBuildEvent" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "PostBuildEvent" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "ClCompile" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "ClCompile" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "Link" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "Link" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "Lib" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "Lib" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "ImpLib" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "ImpLib" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "Midl" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "Midl" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "ResourceCompile" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "ResourceCompile" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "BeforeResGen" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "BeforeResGen" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "ResGen" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "ResGen" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "GenerateSatelliteAssemblies" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "GenerateSatelliteAssemblies" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "Manifest" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "Manifest" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "XdcMake" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "XdcMake" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "BscMake" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" with target "BscMake" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "ComputeMetaGenInputs" in project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.MetaGen.targets" with target "ComputeMetaGenInputs" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "GetNativeManifest" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "GetNativeManifest" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets".
+Overriding target "GetTargetPathWithTargetPlatformMoniker" in project "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" with target "GetTargetPathWithTargetPlatformMoniker" from project "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.DesignTime.targets".
+Project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" on node 1 (default targets).
+Building with tools version "14.0".
+Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (entry point):
+Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+Using "Message" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Message"
+  Configuration=Debug
+Done executing task "Message".
+Task "Message"
+  Platform=Win32
+Done executing task "Message".
+Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\' != '' and !HasTrailingSlash('C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\')).
+Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('Debug\' != '' and !HasTrailingSlash('Debug\')).
+Done building target "_CheckForInvalidConfigurationAndPlatform" in project "pyfindvs.vcxproj".
+Target "_PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Task "CreateItem" skipped, due to false condition; ('%(CustomBuild.IncludeFileToTool)'!='') was evaluated as (''!='').
+Done building target "_PrepareForBuild" in project "pyfindvs.vcxproj".
+Target "_PrepareForReferenceResolution" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveReferences" depends on it):
+Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+Done building target "_PrepareForReferenceResolution" in project "pyfindvs.vcxproj".
+Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('pyfindvs.cpp'!='' and 'false'=='true' and '' != 'false').
+Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveReferences" depends on it):
+Done building target "BeforeResolveReferences" in project "pyfindvs.vcxproj".
+Target "AssignProjectConfiguration" skipped, due to false condition; ('$(CurrentSolutionConfigurationContents)' != '' or '@(ProjectReference)'!='') was evaluated as ('' != '' or ''!='').
+Target "AssignProjectConfiguration" skipped, due to false condition; ('$(CurrentSolutionConfigurationContents)' != '' or '@(ProjectReference)'!='') was evaluated as ('' != '' or ''!='').
+Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveProjectReferences" depends on it):
+Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as (''=='true' and ''!='').
+Done building target "_SplitProjectReferencesByFileExistence" in project "pyfindvs.vcxproj".
+Target "_RemoveNameMetadataFromProjectReferenceItems" skipped, due to false condition; ('@(ProjectReference)'!='') was evaluated as (''!='').
+Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveReferences" depends on it):
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('' == 'true' or 'true' != 'true') and '14.0' != '10.0' and '' != '').
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('' == 'true' or 'true' != 'true') and '14.0' == '10.0' and '' != '').
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and '' != 'true' and 'true' == 'true' and '' != '').
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
+Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
+Done building target "ResolveProjectReferences" in project "pyfindvs.vcxproj".
+Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+Done building target "GetFrameworkPaths" in project "pyfindvs.vcxproj".
+Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+Task "GetReferenceAssemblyPaths" skipped, due to false condition; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) was evaluated as ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+Done building target "GetReferenceAssemblyPaths" in project "pyfindvs.vcxproj".
+Target "SetBuildDefaultEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Current.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForBuild" depends on it):
+Using "SetEnv" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Build.CppTasks.Common.dll".
+Task "SetEnv"
+  PATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\MSBuild\14.0\bin\;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;C:\WINDOWS\SysWow64;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.5;C:\Program Files (x86)\MSBuild\14.0\bin;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\VCPackages;C:\Program Files (x86)\HTML Help Workshop;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Team Tools\Performance Tools;C:\Program Files (x86)\Windows Kits\10\bin\x86;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;%TFSPowerToolDir%;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\TortoiseHg\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\steve_000\.dnx\bin;C:\Users\steve_000\AppData\Local\Microsoft\WindowsApps;;
+Done executing task "SetEnv".
+Task "SetEnv"
+  LIB=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x86;;;C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Lib\um\x86
+Done executing task "SetEnv".
+Task "SetEnv"
+  LIBPATH=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\lib;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib;
+Done executing task "SetEnv".
+Task "SetEnv"
+  INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include;;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt;;;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;;
+Done executing task "SetEnv".
+Done building target "SetBuildDefaultEnvironmentVariables" in project "pyfindvs.vcxproj".
+Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+Target "GetResolvedWinMD" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForBuild" depends on it):
+Done building target "GetResolvedWinMD" in project "pyfindvs.vcxproj".
+Target "PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Cpp.Platform.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForBuild" depends on it):
+Task "VCMessage" skipped, due to false condition; ('$(_Error64bitToolsNotInstalled)' == 'true') was evaluated as ('' == 'true').
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v110').
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v100').
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') was evaluated as (''!='true' and 'true' != 'true' and 'v140' == 'v90').
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') was evaluated as (''!='true' and 'true' != 'true' and 'v140' != 'v90' and 'v140' != 'v100' and 'v140' != 'v110').
+Done building target "PlatformPrepareForBuild" in project "pyfindvs.vcxproj".
+Target "Desktop_PlatformPrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Platforms\Win32\PlatformToolsets\v140\Toolset.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForBuild" depends on it):
+Task "VCMessage" skipped, due to false condition; ($(MissingSDKProps) == 'true') was evaluated as ( == 'true').
+Done building target "Desktop_PlatformPrepareForBuild" in project "pyfindvs.vcxproj".
+Target "GetFrameworkPaths" skipped. Previously built successfully.
+Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+Target "SetCABuildNativeEnvironmentVariables" in file "C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v14.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForBuild" depends on it):
+Initializing task factory "CodeTaskFactory" from assembly "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Build.Tasks.Core.dll".
+Using "SetEnvironmentVariable" task from the task factory "Code Task Factory".
+Task "SetEnvironmentVariable"
+Done executing task "SetEnvironmentVariable".
+Done building target "SetCABuildNativeEnvironmentVariables" in project "pyfindvs.vcxproj".
+Target "_ValidatePythonInstall" in project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForBuild" depends on it):
+Task "Error" skipped, due to false condition; ($(PythonHome) == '') was evaluated as (C:\Users\steve_000\AppData\Local\Programs\Python\Python35-32\ == '').
+Task "Error" skipped, due to false condition; ($(PythonDevVersion) == '') was evaluated as (3.5.2150.0 == '').
+Task "Warning" skipped, due to false condition; ($(PythonCorePDBVersion) == '') was evaluated as (3.5.2150.0 == '').
+Done building target "_ValidatePythonInstall" in project "pyfindvs.vcxproj".
+Target "EnsureNuGetPackageBuildImports" in project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForBuild" depends on it):
+Task "Error" skipped, due to false condition; (!Exists('..\packages\Microsoft.VisualStudio.Setup.Configuration.Native.1.3.269-rc\build\native\Microsoft.VisualStudio.Setup.Configuration.Native.targets')) was evaluated as (!Exists('..\packages\Microsoft.VisualStudio.Setup.Configuration.Native.1.3.269-rc\build\native\Microsoft.VisualStudio.Setup.Configuration.Native.targets')).
+Done building target "EnsureNuGetPackageBuildImports" in project "pyfindvs.vcxproj".
+Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)' != 'true' and '$(ConfigurationPlatformExists)' != 'true') was evaluated as ('' != 'true' and 'true' != 'true').
+Using "MakeDir" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "MakeDir"
+Done executing task "MakeDir".
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(WindowsAppContainer)'=='true' and '$(ConfigurationType)'!='Application' and '$(ConfigurationType)'!='DynamicLibrary' and '$(ConfigurationType)'!='StaticLibrary') was evaluated as (''!='true' and 'false'=='true' and 'DynamicLibrary'!='Application' and 'DynamicLibrary'!='DynamicLibrary' and 'DynamicLibrary'!='StaticLibrary').
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and ('$(TargetFrameworkVersion)'=='v3.5' or '$(TargetFrameworkVersion)'=='v3.0' or '$(TargetFrameworkVersion)'=='v2.0' )) was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and ('v4.0'=='v3.5' or 'v4.0'=='v3.0' or 'v4.0'=='v2.0' )).
+Task "VCMessage" skipped, due to false condition; ('$(DesignTimeBuild)'!='true' and '$(VCInstallDir)'=='' and '$(UseEnv)' != 'true' and '$(PlatformToolset)'=='v90') was evaluated as (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true' and 'v140'=='v90').
+Task "VCMessage" skipped, due to false condition; ('$(VCInstallDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\'=='' and '' != 'true').
+Task "VCMessage" skipped, due to false condition; ('$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') was evaluated as ('C:\Program Files (x86)\Windows Kits\8.1\'=='' and '' != 'true').
+Task "VCMessage" skipped, due to false condition; ('$(IntDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+Task "VCMessage" skipped, due to false condition; ('$(OutDirTrailingSlashWarning)'=='true') was evaluated as (''=='true').
+Task "VCMessage" skipped, due to false condition; ('%(CompatibilityIssues.Identity)' != '' and '$(DesignTimeBuild)'!='true') was evaluated as ('' != '' and ''!='true').
+Task "VCMessage" skipped, due to false condition; ('$(_MBCS_Using)' == 'true' and '$(_MBCS_Installed)' != 'true' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' == 'true' and '' != 'true' and '' != 'true').
+Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirSharingDetected)' != 'true' and '$(IntDirSharingDetected)' == 'true') was evaluated as ('' != 'true' and '' == 'true').
+Task "VCMessage" skipped, due to false condition; ('$(IgnoreWarnIntDirInTempDetected)' != 'true' and ('$(_IntDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_IntDirFullpath.StartsWith($(Temp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Temp), true, null))' == 'true')) was evaluated as ('' != 'true' and ('False' == 'true' or 'False' == 'true' or 'False' == 'true' or 'False' == 'true')).
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "PrepareForBuild" in project "pyfindvs.vcxproj".
+Target "_PrepareForReferenceResolution" skipped. Previously built successfully.
+Target "ComputeCrtSDKReference" skipped, due to false condition; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') was evaluated as ('pyfindvs.cpp'!='' and 'false'=='true' and '' != 'false').
+Target "GetInstalledSDKLocations" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveSDKReferences" depends on it):
+Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '' and '$(SupportWindows81SDKs)' == 'true' and '$(TargetPlatformIdentifierWindows81)' != '' and '$(TargetPlatformVersionWindows81)' != '') was evaluated as ('' != '' and '' == 'true' and '' != '' and '' != '').
+Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '' and '$(SupportWindowsPhone81SDKs)' == 'true' and '$(TargetPlatformIdentifierWindowsPhone81)' != '' and '$(TargetPlatformVersionWindowsPhone81)' != '') was evaluated as ('' != '' and '' == 'true' and '' != '' and '' != '').
+Done building target "GetInstalledSDKLocations" in project "pyfindvs.vcxproj".
+Target "ModifyUnitTestPlatformVersion" in file "C:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportBefore\Windows.8.1.UT_SDKReference.props" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveSDKReferences" depends on it):
+Done building target "ModifyUnitTestPlatformVersion" in project "pyfindvs.vcxproj".
+Target "ResolveSDKReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+Done building target "ResolveSDKReferences" in project "pyfindvs.vcxproj".
+Target "ResolveSDKReferences" skipped. Previously built successfully.
+Target "ExpandSDKReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveAssemblyReferences" depends on it):
+Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+Done building target "ExpandSDKReferences" in project "pyfindvs.vcxproj".
+Target "ResolveNuGetPackageAssets" skipped, due to false condition; ('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)')) was evaluated as ('true' == 'true' and exists('project.lock.json')).
+Target "ResolveAssemblyReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveReferences" depends on it):
+Task "ResolveAssemblyReference" skipped, due to false condition; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') was evaluated as (''!='' or ''!='' or '' != '').
+Done building target "ResolveAssemblyReferences" in project "pyfindvs.vcxproj".
+Target "GenerateBindingRedirects" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') was evaluated as ('' == 'true' and '' == 'true').
+Target "GenerateBindingRedirectsUpdateAppConfig" skipped, due to false condition; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) was evaluated as ('' == 'true' and '' == 'true' and Exists('Debug\pyfindvs.vcxproj.pyfindvs.pyd.config')).
+Target "ResolveComReferences" skipped, due to false condition; ('@(COMReference)'!='' or '@(COMFileReference)'!='') was evaluated as (''!='' or ''!='').
+Target "AfterResolveReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ResolveReferences" depends on it):
+Done building target "AfterResolveReferences" in project "pyfindvs.vcxproj".
+Target "ImplicitlyExpandDesignTimeFacades" skipped, due to false condition; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') was evaluated as ('' == 'true').
+Target "ResolveTestReferences" skipped, due to false condition; ('@(Shadow)'!='') was evaluated as (''!='').
+Target "ResolveReferences" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Done building target "ResolveReferences" in project "pyfindvs.vcxproj".
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "InitializeBuildStatus" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "ReadLinesFromFile"
+Done executing task "ReadLinesFromFile".
+Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "WriteLinesToFile"
+Done executing task "WriteLinesToFile".
+Using "Touch" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Touch"
+  Creating "Debug\pyfindvs.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+Done executing task "Touch".
+Done building target "InitializeBuildStatus" in project "pyfindvs.vcxproj".
+Target "AssignProjectConfiguration" skipped, due to false condition; ('$(CurrentSolutionConfigurationContents)' != '' or '@(ProjectReference)'!='') was evaluated as ('' != '' or ''!='').
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "BuildGenerateSourcesTraverse" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "BuildGenerateSources" depends on it):
+Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != '' and '' == 'true').
+Done building target "BuildGenerateSourcesTraverse" in project "pyfindvs.vcxproj".
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "ResolveReferences" skipped. Previously built successfully.
+Target "BeforeBuildGenerateSources" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+Done building target "BeforeBuildGenerateSources" in project "pyfindvs.vcxproj".
+Target "PreBuildEvent" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+Task "Message" skipped, due to false condition; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+Task "Exec" skipped, due to false condition; ('%(PreBuildEvent.Command)' != '') was evaluated as ('' != '').
+Done building target "PreBuildEvent" in project "pyfindvs.vcxproj".
+Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
+Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+Target "Xsd" skipped, due to false condition; ('@(Xsd)' != '') was evaluated as ('' != '').
+Target "_Xsd" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+Done building target "_Xsd" in project "pyfindvs.vcxproj".
+Target "MakeDirsForMidl" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Midl" depends on it):
+Task "Makedir"
+Done executing task "Makedir".
+Done building target "MakeDirsForMidl" in project "pyfindvs.vcxproj".
+Target "Midl" skipped, due to false condition; ('@(Midl)' != '') was evaluated as ('' != '').
+Target "CustomBuild" skipped, due to false condition; ('@(CustomBuild)' != '') was evaluated as ('' != '').
+Target "FxExport" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+Target "FxCompile" skipped, due to false condition; ('@(FxCompile)' != '') was evaluated as ('' != '').
+Target "ComputeMIDLGeneratedCompileInputs" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Midl" depends on it):
+Done building target "ComputeMIDLGeneratedCompileInputs" in project "pyfindvs.vcxproj".
+Target "AfterMidl" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Midl" depends on it):
+Done building target "AfterMidl" in project "pyfindvs.vcxproj".
+Target "_Midl" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+Done building target "_Midl" in project "pyfindvs.vcxproj".
+Target "AfterBuildGenerateSources" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+Done building target "AfterBuildGenerateSources" in project "pyfindvs.vcxproj".
+Target "AfterBuildGenerateSourcesEvent" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildGenerateSourcesAction" depends on it):
+Done building target "AfterBuildGenerateSourcesEvent" in project "pyfindvs.vcxproj".
+Target "_BuildGenerateSourcesAction" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "BuildGenerateSources" depends on it):
+Done building target "_BuildGenerateSourcesAction" in project "pyfindvs.vcxproj".
+Target "BuildGenerateSources" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Done building target "BuildGenerateSources" in project "pyfindvs.vcxproj".
+Target "AssignProjectConfiguration" skipped, due to false condition; ('$(CurrentSolutionConfigurationContents)' != '' or '@(ProjectReference)'!='') was evaluated as ('' != '' or ''!='').
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "BuildCompileTraverse" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "BuildCompile" depends on it):
+Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
+Done building target "BuildCompileTraverse" in project "pyfindvs.vcxproj".
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "ResolveReferences" skipped. Previously built successfully.
+Target "BeforeClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Done building target "BeforeClCompile" in project "pyfindvs.vcxproj".
+Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
+Target "ComputeCLInputPDBName" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Done building target "ComputeCLInputPDBName" in project "pyfindvs.vcxproj".
+Target "ResolveReferences" skipped. Previously built successfully.
+Target "ComputeReferenceCLInput" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Task "WriteLinesToFile" skipped, due to false condition; (('@(_ReferenceCopyLocalPaths)'!='') and '$(DesignTimeBuild)' != 'true') was evaluated as ((''!='') and '' != 'true').
+Task "Message" skipped, due to false condition; ('$(_REFERENCE_DEBUG)'=='true') was evaluated as (''=='true').
+Done building target "ComputeReferenceCLInput" in project "pyfindvs.vcxproj".
+Target "WarnCompileDuplicatedFilename" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Task "VCMessage" skipped, due to false condition; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') was evaluated as ('' != 'true' and 'pyfindvs.cpp' != 'pyfindvs.cpp' and 'Debug\' == 'Debug\').
+Done building target "WarnCompileDuplicatedFilename" in project "pyfindvs.vcxproj".
+Target "FixupCLCompileOptions" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Done building target "FixupCLCompileOptions" in project "pyfindvs.vcxproj".
+Target "MakeDirsForCl" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "MakeDirsForCl" in project "pyfindvs.vcxproj".
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "SetBuildDefaultEnvironmentVariables" skipped. Previously built successfully.
+Target "SetUserMacroEnvironmentVariables" skipped, due to false condition; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') was evaluated as ('' != '' and '' != 'true').
+Target "_SelectedFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "SelectClCompile" depends on it):
+Done building target "_SelectedFiles" in project "pyfindvs.vcxproj".
+Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
+Target "ComputeCLInputPDBName" skipped. Previously built successfully.
+Target "ComputeReferenceCLInput" skipped. Previously built successfully.
+Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
+Target "FixupCLCompileOptions" skipped. Previously built successfully.
+Target "_SelectedFiles" skipped. Previously built successfully.
+Target "SelectCustomBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "SelectClCompile" depends on it):
+Done building target "SelectCustomBuild" in project "pyfindvs.vcxproj".
+Target "SelectClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ClCompile" depends on it):
+Done building target "SelectClCompile" in project "pyfindvs.vcxproj".
+Target "GenerateTargetFrameworkMonikerAttribute" skipped, due to false condition; ('$(GenerateTargetFrameworkAttribute)' == 'true') was evaluated as ('false' == 'true').
+Target "ManagedIncrementalBuildPreProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('pyfindvs.cpp' != '' and 'false' == 'True').
+Target "ClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Task "Delete" skipped, due to false condition; ('%(ClCompile.DebugInformationFormat)' != '' and '%(ClCompile.DebugInformationFormat)' != 'None' and '%(ClCompile.DebugInformationFormat)' != 'OldStyle' and '%(ClCompile.ProgramDataBaseFileName)' != '' and !Exists(%(ClCompile.ProgramDataBaseFileName))) was evaluated as ('EditAndContinue' != '' and 'EditAndContinue' != 'None' and 'EditAndContinue' != 'OldStyle' and 'Debug\vc140.pdb' != '' and !Exists(Debug\vc140.pdb)).
+Task "CL" skipped, due to false condition; ('%(ClCompile.PrecompiledHeader)' == 'Create' and '%(ClCompile.ExcludedFromBuild)'!='true' and '%(ClCompile.CompilerIteration)' == '') was evaluated as ('NotUsing' == 'Create' and ''!='true' and '' == '').
+Using "CL" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Build.CppTasks.Common.dll".
+Task "CL"
+  Read Tracking Logs:
+  	Debug\pyfindvs.tlog\CL.read.1.tlog
+  Outputs for C:\USERS\STEVE_000\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\PYFINDVS\PYFINDVS\PYFINDVS.CPP:
+  	C:\USERS\STEVE_000\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\PYFINDVS\PYFINDVS\DEBUG\PYFINDVS.OBJ
+  All outputs are up-to-date.
+Done executing task "CL".
+Done building target "ClCompile" in project "pyfindvs.vcxproj".
+Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('pyfindvs.cpp' != '' and 'false' == 'True').
+Target "AfterClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ClCompile" depends on it):
+Done building target "AfterClCompile" in project "pyfindvs.vcxproj".
+Target "_ClCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildCompileAction" depends on it):
+Done building target "_ClCompile" in project "pyfindvs.vcxproj".
+Target "_ResGen" skipped, due to false condition; ('@(EmbeddedResource)'!='') was evaluated as (''!='').
+Target "BeforeResourceCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ResourceCompile" depends on it):
+Done building target "BeforeResourceCompile" in project "pyfindvs.vcxproj".
+Target "MakeDirsForResourceCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ResourceCompile" depends on it):
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "MakeDirsForResourceCompile" in project "pyfindvs.vcxproj".
+Target "ResourceCompile" skipped, due to false condition; ('@(ResourceCompile)' != '') was evaluated as ('' != '').
+Target "AfterResourceCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_ResourceCompile" depends on it):
+Done building target "AfterResourceCompile" in project "pyfindvs.vcxproj".
+Target "_ResourceCompile" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildCompileAction" depends on it):
+Done building target "_ResourceCompile" in project "pyfindvs.vcxproj".
+Target "_ImpLib" skipped, due to false condition; ('$(ImpLibCompiled)' == 'true') was evaluated as ('' == 'true').
+Target "_Lib" skipped, due to false condition; ('$(LibCompiled)' == 'true') was evaluated as ('' == 'true').
+Target "AfterBuildCompileEvent" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildCompileAction" depends on it):
+Done building target "AfterBuildCompileEvent" in project "pyfindvs.vcxproj".
+Target "_BuildCompileAction" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "BuildCompile" depends on it):
+Done building target "_BuildCompileAction" in project "pyfindvs.vcxproj".
+Target "BuildCompile" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Done building target "BuildCompile" in project "pyfindvs.vcxproj".
+Target "AssignProjectConfiguration" skipped, due to false condition; ('$(CurrentSolutionConfigurationContents)' != '' or '@(ProjectReference)'!='') was evaluated as ('' != '' or ''!='').
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "BuildLinkTraverse" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "BuildLink" depends on it):
+Task "MSBuild" skipped, due to false condition; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') was evaluated as ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
+Done building target "BuildLinkTraverse" in project "pyfindvs.vcxproj".
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "ResolveReferences" skipped. Previously built successfully.
+Target "ComputeLegacyManifestEmbedding" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Task "VCMessage" skipped, due to false condition; ('$(RevertManifestEmbedding)' == 'true' and '$(_LegacyManifestEmbeddingDebug)' == 'true') was evaluated as ('' == 'true' and '' == 'true').
+Done building target "ComputeLegacyManifestEmbedding" in project "pyfindvs.vcxproj".
+Target "BeforeLink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "BeforeLink" in project "pyfindvs.vcxproj".
+Target "ComputeRCOutputs" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ComputeRCGeneratedLinkInputs" depends on it):
+Done building target "ComputeRCOutputs" in project "pyfindvs.vcxproj".
+Target "ComputeRCGeneratedLinkInputs" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "ComputeRCGeneratedLinkInputs" in project "pyfindvs.vcxproj".
+Target "ComputeManifestGeneratedLinkerInputs" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "ComputeManifestGeneratedLinkerInputs" in project "pyfindvs.vcxproj".
+Target "ComputeCustomBuildOutput" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Task "CreateItem" skipped, due to false condition; ('%(CustomBuildDirsToMake.OutputFileToTool)'!='') was evaluated as (''!='').
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "ComputeCustomBuildOutput" in project "pyfindvs.vcxproj".
+Target "ComputeMIDLGeneratedCompileInputs" skipped. Previously built successfully.
+Target "ComputeCLInputPDBName" skipped. Previously built successfully.
+Target "ComputeReferenceCLInput" skipped. Previously built successfully.
+Target "WarnCompileDuplicatedFilename" skipped. Previously built successfully.
+Target "FixupCLCompileOptions" skipped. Previously built successfully.
+Target "ComputeCLOutputs" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "ComputeCLGeneratedLinkInputs" depends on it):
+Done building target "ComputeCLOutputs" in project "pyfindvs.vcxproj".
+Target "ComputeCLGeneratedLinkInputs" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "ComputeCLGeneratedLinkInputs" in project "pyfindvs.vcxproj".
+Target "ComputeLinkInputsFromProject" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "ComputeLinkInputsFromProject" in project "pyfindvs.vcxproj".
+Target "ComputeReferenceLinkInputs" skipped, due to false condition; (@(ProjectReference) != '') was evaluated as ( != '').
+Target "ComputeManifestInputsTargets" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "ComputeManifestInputsTargets" in project "pyfindvs.vcxproj".
+Target "ManifestResourceCompile" skipped, due to false condition; ('$(EmbedManifestBy)' == 'LINK' and '@(Manifest)' != '') was evaluated as ('LINK' == 'LINK' and '' != '').
+Target "AssignWinFXEmbeddedResource" skipped, due to false condition; ('@(WinFXEmbeddedResource)' != '') was evaluated as ('' != '').
+Target "AssignTargetPaths" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareResourceNames" depends on it):
+Using "AssignTargetPath" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Task "AssignTargetPath" skipped, due to false condition; ('@(_DeploymentBaseManifestWithTargetPath)'=='' and '%(None.Extension)'=='.manifest') was evaluated as (''=='' and '.config'=='.manifest').
+Done building target "AssignTargetPaths" in project "pyfindvs.vcxproj".
+Target "AssignTargetPaths" skipped. Previously built successfully.
+Target "SplitResourcesByCulture" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareResourceNames" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ResxWithNoCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(ResxWithCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(NonResxWithCulture)'!='') was evaluated as (''!='').
+Task "Warning" skipped, due to false condition; ('@(NonResxWithNoCulture)'!='') was evaluated as (''!='').
+Using "AssignCulture" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "AssignCulture"
+Done executing task "AssignCulture".
+Done building target "SplitResourcesByCulture" in project "pyfindvs.vcxproj".
+Target "CreateManifestResourceNames" skipped, due to false condition; ('@(EmbeddedResource)' != '') was evaluated as ('' != '').
+Target "CreateCustomManifestResourceNames" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareResourceNames" depends on it):
+Done building target "CreateCustomManifestResourceNames" in project "pyfindvs.vcxproj".
+Target "PrepareResourceNames" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "PrepareResourceNames" in project "pyfindvs.vcxproj".
+Target "MakeDirsForLink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "MakeDirsForLink" in project "pyfindvs.vcxproj".
+Target "DoLinkOutputFilesMatch" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' == '') was evaluated as ('C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pyd' == '').
+Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.FullPath)' != '$([System.IO.Path]::GetFullPath($(TargetPath)))') was evaluated as ('C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pyd' != '' and 'C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pyd' != 'C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pyd').
+Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Extension)' != '' and '%(_OutputFileFromLink.Extension)' != '$(TargetExt)') was evaluated as ('C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pyd' != '' and '.pyd' != '' and '.pyd' != '.pyd').
+Task "VCMessage" skipped, due to false condition; ('@(_OutputFileFromLink)' != '' and '%(_OutputFileFromLink.Filename)' != '' and '%(_OutputFileFromLink.Filename)' != '$(TargetName)') was evaluated as ('C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pyd' != '' and 'pyfindvs' != '' and 'pyfindvs' != 'pyfindvs').
+Task "VCMessage" skipped, due to false condition; ('%(Link.MinimumRequiredVersion)' != '' and ('%(Link.Subsystem)' == '' or '%(Link.Subsystem)' == 'NotSet')) was evaluated as ('' != '' and ('' == '' or '' == 'NotSet')).
+Done building target "DoLinkOutputFilesMatch" in project "pyfindvs.vcxproj".
+Target "PreLinkEvent" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Task "Message" skipped, due to false condition; ('%(PreLinkEvent.Message)' != '' and '%(PreLinkEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+Task "Exec" skipped, due to false condition; ('%(PreLinkEvent.Command)' != '') was evaluated as ('' != '').
+Done building target "PreLinkEvent" in project "pyfindvs.vcxproj".
+Target "ComputeLinkSwitches" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Link" depends on it):
+Done building target "ComputeLinkSwitches" in project "pyfindvs.vcxproj".
+Target "Link" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Using "Link" task from assembly "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.Build.CppTasks.Common.dll".
+Task "Link"
+  Write Tracking Logs:
+  	Debug\pyfindvs.tlog\link.write.1.tlog
+  Read Tracking Logs:
+  	Debug\pyfindvs.tlog\link.read.1.tlog
+  Outputs for C:\USERS\STEVE_000\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\PYFINDVS\PYFINDVS\DEBUG\PYFINDVS.OBJ:
+  	C:\USERS\STEVE_000\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\PYFINDVS\PYFINDVS\DEBUG\PYFINDVS.ILK
+  	C:\USERS\STEVE_000\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\PYFINDVS\PYFINDVS\DEBUG\PYFINDVS.PYD
+  	C:\USERS\STEVE_000\DOCUMENTS\VISUAL STUDIO 2015\PROJECTS\PYFINDVS\PYFINDVS\DEBUG\PYFINDVS.PDB
+  All outputs are up-to-date.
+Done executing task "Link".
+Task "Message"
+  pyfindvs.vcxproj -> C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pyd
+Done executing task "Message".
+Task "Message" skipped, due to false condition; (('$(EmbedManifestBy)' != 'LINK' or '$(LegacyManifestEmbedding)' != 'true' or '$(LinkSkippedExecution)' == 'true') and
+             %(Link.GenerateDebugInformation) == 'DebugFastLink') was evaluated as (('LINK' != 'LINK' or '' != 'true' or 'True' == 'true') and
+             true == 'DebugFastLink').
+Task "Message"
+  pyfindvs.vcxproj -> C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pdb (Full PDB)
+Done executing task "Message".
+Done building target "Link" in project "pyfindvs.vcxproj".
+Target "MetaGenInputsOutputs" skipped, due to false condition; ('$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('false' == 'True').
+Target "ComputeMetaGenInputs" skipped, due to false condition; ('$(CLRSupport)'!='' and '$(CLRSupport)'!='false') was evaluated as ('false'!='' and 'false'!='false').
+Target "MetaGen" skipped, due to false condition; ('@(MetaGen)' != '') was evaluated as ('' != '').
+Target "ComputeLinkImportLibraryOutputsForClean" skipped, due to false condition; ('$(LinkSkippedExecution)' != 'true') was evaluated as ('True' != 'true').
+Target "AfterLink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_Link" depends on it):
+Done building target "AfterLink" in project "pyfindvs.vcxproj".
+Target "_Link" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "_Link" in project "pyfindvs.vcxproj".
+Target "_ALink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "_ALink" in project "pyfindvs.vcxproj".
+Target "ComputeLegacyManifestEmbedding" skipped. Previously built successfully.
+Target "_Manifest" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Task "CallTarget" skipped, due to false condition; ('$(LegacyManifestEmbedding)' == 'true') was evaluated as ('' == 'true').
+Done building target "_Manifest" in project "pyfindvs.vcxproj".
+Target "RegisterOutput" skipped, due to false condition; ('$(LinkSkippedExecution)' != 'true' and (('$(Platform)' == 'x64' and ('$(PROCESSOR_ARCHITECTURE)' == 'AMD64' or '$(PROCESSOR_ARCHITEW6432)' == 'AMD64')) or '$(Platform)' == 'Win32')) was evaluated as ('True' != 'true' and (('Win32' == 'x64' and ('x86' == 'AMD64' or 'AMD64' == 'AMD64')) or 'Win32' == 'Win32')).
+Target "PrepareForBuild" skipped. Previously built successfully.
+Target "ResolveReferences" skipped. Previously built successfully.
+Target "ResolvedXDCMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_XdcMake" depends on it):
+Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.Extension)' == '.vcxproj' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '$(_ClCompileGenerateXMLDocumentationFiles)' == 'true') was evaluated as ('' == '.vcxproj' and '' != '' and '' != '' and '' == 'true').
+Done building target "ResolvedXDCMake" in project "pyfindvs.vcxproj".
+Target "ComputeCLCompileGeneratedXDCFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_XdcMake" depends on it):
+Done building target "ComputeCLCompileGeneratedXDCFiles" in project "pyfindvs.vcxproj".
+Target "MakeDirsForXdcMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_XdcMake" depends on it):
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "MakeDirsForXdcMake" in project "pyfindvs.vcxproj".
+Target "XdcMake" skipped, due to false condition; ('@(XdcMake)' != '') was evaluated as ('' != '').
+Target "_XdcMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "_XdcMake" in project "pyfindvs.vcxproj".
+Target "ComputeCLCompileGeneratedSbrFiles" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BscMake" depends on it):
+Done building target "ComputeCLCompileGeneratedSbrFiles" in project "pyfindvs.vcxproj".
+Target "MakeDirsForBscMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BscMake" depends on it):
+Task "MakeDir"
+Done executing task "MakeDir".
+Done building target "MakeDirsForBscMake" in project "pyfindvs.vcxproj".
+Target "BscMake" skipped, due to false condition; ('@(BscMake)' != '') was evaluated as ('' != '').
+Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
+Target "_BscMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "_BscMake" in project "pyfindvs.vcxproj".
+Target "RunMergeNativeCodeAnalysis" skipped, due to false condition; ('$(Language)'=='C++' and '$(RunCodeAnalysisOnThisProject)'=='true') was evaluated as ('C++'=='C++' and ''=='true').
+Target "RunNativeCodeAnalysis" skipped, due to false condition; ('$(Language)'=='C++' and '$(RunCodeAnalysisOnThisProject)'=='true') was evaluated as ('C++'=='C++' and ''=='true').
+Target "_GenerateSatelliteAssemblyInputs" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "CreateSatelliteAssemblies" depends on it):
+Task "Warning" skipped, due to false condition; ('@(ManifestResourceWithCulture)'!='' and '%(ManifestResourceWithCulture.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Task "Warning" skipped, due to false condition; ('@(ManifestNonResxWithCultureOnDisk)'!='' and '%(ManifestNonResxWithCultureOnDisk.EmittedForCompatibilityOnly)'=='') was evaluated as (''!='' and ''=='').
+Done building target "_GenerateSatelliteAssemblyInputs" in project "pyfindvs.vcxproj".
+Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
+Target "GenerateSatelliteAssemblies" skipped, due to false condition; ('@(_SatelliteAssemblyResourceInputs)' != '') was evaluated as ('' != '').
+Target "CreateSatelliteAssemblies" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "CreateSatelliteAssemblies" in project "pyfindvs.vcxproj".
+Target "_Appverifier" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "_Appverifier" in project "pyfindvs.vcxproj".
+Target "_Deploy" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "_Deploy" in project "pyfindvs.vcxproj".
+Target "ComputeIntermediateSatelliteAssemblies" skipped, due to false condition; (@(ReferenceSatellitePaths->'%(DestinationSubDirectory)') != '') was evaluated as ( != '').
+Target "_CopyFilesMarkedCopyLocal" skipped, due to false condition; ('@(ReferenceCopyLocalPaths)' != '') was evaluated as ('' != '').
+Target "AssignTargetPaths" skipped. Previously built successfully.
+Target "_SplitProjectReferencesByFileExistence" skipped. Previously built successfully.
+Target "GetCopyToOutputDirectoryXamlAppDefs" in file "C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\Microsoft.Xaml.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "GetCopyToOutputDirectoryItems" depends on it):
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Done building target "GetCopyToOutputDirectoryXamlAppDefs" in project "pyfindvs.vcxproj".
+Target "GetCopyToOutputDirectoryItems" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_CopySourceItemsToOutputDirectory" depends on it):
+Task "MSBuild" skipped, due to false condition; ('@(_MSBuildProjectReferenceExistent)' != '' and '$(_GetChildProjectCopyToOutputDirectoryItems)' == 'true' and '%(_MSBuildProjectReferenceExistent.Private)' != 'false' and '$(UseCommonOutputDirectory)' != 'true') was evaluated as ('' != '' and 'true' == 'true' and '' != 'false' and 'false' != 'true').
+Task "AssignTargetPath"
+Done executing task "AssignTargetPath".
+Done building target "GetCopyToOutputDirectoryItems" in project "pyfindvs.vcxproj".
+Target "_CopyOutOfDateSourceItemsToOutputDirectory" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectory)' != '' ) was evaluated as ( '' != '' ).
+Target "_CopyOutOfDateSourceItemsToOutputDirectoryAlways" skipped, due to false condition; ( '@(_SourceItemsToCopyToOutputDirectoryAlways)' != '' ) was evaluated as ( '' != '' ).
+Target "_CopySourceItemsToOutputDirectory" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+Done building target "_CopySourceItemsToOutputDirectory" in project "pyfindvs.vcxproj".
+Target "_CopyAppConfigFile" skipped, due to false condition; ( '@(AppConfigWithTargetPath)' != '' ) was evaluated as ( '' != '' ).
+Target "_CopyManifestFiles" skipped, due to false condition; ( '$(_DeploymentCopyApplicationManifest)'=='true' or '$(GenerateClickOnceManifests)'=='true' ) was evaluated as ( ''=='true' or ''=='true' ).
+Target "_CheckForCompileOutputs" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "CopyFilesToOutputDirectory" depends on it):
+Done building target "_CheckForCompileOutputs" in project "pyfindvs.vcxproj".
+Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+Target "CopyFilesToOutputDirectory" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "PrepareForRun" depends on it):
+Task "Copy" skipped, due to false condition; ('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)' != 'true') was evaluated as ('true' == 'true' and 'true' != 'true').
+Task "Message" skipped, due to false condition; ('$(CopyBuildOutputToOutputDirectory)' == 'true' and '$(SkipCopyBuildProduct)'!='true') was evaluated as ('true' == 'true' and 'true'!='true').
+Task "Copy" skipped, due to false condition; ('@(AddModules)' != '') was evaluated as ('' != '').
+Task "Copy" skipped, due to false condition; ('$(_SGenDllCreated)'=='true') was evaluated as ('false'=='true').
+Using "Copy" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Copy"
+  Did not copy from file "Debug\pyfindvs.pdb" to file "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\Debug\pyfindvs.pdb" because the "SkipUnchangedFiles" parameter was set to "true" in the project and the files' sizes and timestamps match.
+Done executing task "Copy".
+Task "Copy" skipped, due to false condition; ('$(_DocumentationFileProduced)'=='true') was evaluated as ('false'=='true').
+Task "Copy" skipped, due to false condition; ('@(IntermediateSatelliteAssembliesWithTargetPath)' != '') was evaluated as ('' != '').
+Task "Copy" skipped, due to false condition; ('@(ReferenceComWrappersToCopyLocal)' != '' or '@(ResolvedIsolatedComModules)' != '' or '@(_DeploymentLooseManifestFile)' != '' or '@(NativeReferenceFile)' != '' ) was evaluated as ('' != '' or '' != '' or '' != '' or '' != '' ).
+Task "Copy" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '@(WinMDExpArtifacts)' != '') was evaluated as ('' != 'true' and '' != '').
+Task "Message" skipped, due to false condition; ('$(SkipCopyWinMDArtifact)' != 'true' and '$(_WindowsMetadataOutputPath)' != '') was evaluated as ('' != 'true' and '' != '').
+Done building target "CopyFilesToOutputDirectory" in project "pyfindvs.vcxproj".
+Target "PrepareForRun" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Done building target "PrepareForRun" in project "pyfindvs.vcxproj".
+Target "CustomBuildStep" skipped, due to false condition; ('@(CustomBuildStep)' != '' and '$(SelectedFiles)'=='') was evaluated as ('' != '' and ''=='').
+Target "PostBuildEvent" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "_BuildLinkAction" depends on it):
+Task "Message" skipped, due to false condition; ('%(PostBuildEvent.Message)' != '' and '%(PostBuildEvent.Command)' != '') was evaluated as ('' != '' and '' != '').
+Task "Exec" skipped, due to false condition; ('%(PostBuildEvent.Command)' != '') was evaluated as ('' != '').
+Done building target "PostBuildEvent" in project "pyfindvs.vcxproj".
+Target "_BuildLinkAction" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "BuildLink" depends on it):
+Done building target "_BuildLinkAction" in project "pyfindvs.vcxproj".
+Target "BuildLink" in file "C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Done building target "BuildLink" in project "pyfindvs.vcxproj".
+Target "CreateTfsBuildInfoResource" skipped, due to false condition; ( $(AddBuildInfoToAssembly)==true ) was evaluated as ( false==true ).
+Target "AfterBuild" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Done building target "AfterBuild" in project "pyfindvs.vcxproj".
+Target "FinalizeBuildStatus" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (target "Build" depends on it):
+Using "Delete" task from assembly "Microsoft.Build.Tasks.Core, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Delete"
+  Deleting file "Debug\pyfindvs.tlog\unsuccessfulbuild".
+Done executing task "Delete".
+Task "Touch"
+  Touching "Debug\pyfindvs.tlog\pyfindvs.lastbuildstate".
+Done executing task "Touch".
+Done building target "FinalizeBuildStatus" in project "pyfindvs.vcxproj".
+Target "Build" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.BuildSteps.Targets" from project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (entry point):
+Done building target "Build" in project "pyfindvs.vcxproj".
+Done Building Project "C:\Users\steve_000\Documents\Visual Studio 2015\Projects\pyfindvs\pyfindvs\pyfindvs.vcxproj" (default targets).
+
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.58
