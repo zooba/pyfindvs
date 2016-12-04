@@ -6,7 +6,7 @@
 #-------------------------------------------------------------------------
 
 __author__ = 'Steve Dower <steve.dower@microsoft.com>'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 import pyfindvs._helper as _helper
 

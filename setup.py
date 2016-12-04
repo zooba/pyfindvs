@@ -70,7 +70,7 @@ CLASSIFIERS = [
 
 setup_cfg = dict(
     name='pyfindvs',
-    version='0.1.0',
+    version='0.1.1',
     description='Python module for locating Visual Studio',
     long_description=long_description,
     author='Microsoft Corporation',
