@@ -2,6 +2,7 @@
 #include <Setup.Configuration.h>
 #pragma comment(lib, "ole32.lib")
 #pragma comment(lib, "oleaut32.lib")
+#pragma comment(lib, "version.lib")
 #pragma comment(lib, "Microsoft.VisualStudio.Setup.Configuration.Native.lib")
 
 #include <Python.h>
@@ -196,11 +197,60 @@ PyObject *pyfindvs_findall(PyObject *self, PyObject *args, PyObject *kwargs) {
     return res;
 }
 
+PyDoc_STRVAR(pyfindvs_getversion_doc, "getversion(path)\
+\
+Reads the product version from the specified file.");
+
+PyObject *pyfindvs_getversion(PyObject *self, PyObject *args, PyObject *kwargs) {
+    LPVOID verblock;
+    DWORD verblock_size;
+    DWORD major, minor, build;
+
+    PyObject *res = NULL;
+
+    PyObject *path_obj;
+    const wchar_t *path;
+    Py_ssize_t path_len;
+
+    static const char* keywords[] = { "path", NULL };
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, "O&:getversion", (char**)keywords, PyUnicode_FSDecoder, &path_obj))
+        return NULL;
+
+    path = PyUnicode_AsWideCharString(path_obj, &path_len);
+    Py_DECREF(path_obj);
+    if (!path) {
+        return NULL;
+    }
+
+    if ((verblock_size = GetFileVersionInfoSizeW(path, NULL)) &&
+        (verblock = PyMem_RawMalloc(verblock_size))) {
+        VS_FIXEDFILEINFO *ffi;
+        UINT ffi_len;
+
+        if (GetFileVersionInfoW(path, 0, verblock_size, verblock) &&
+            VerQueryValueW(verblock, L"", (LPVOID*)&ffi, &ffi_len)) {
+            major = HIWORD(ffi->dwProductVersionMS);
+            minor = LOWORD(ffi->dwProductVersionMS);
+            build = HIWORD(ffi->dwProductVersionLS);
+        }
+        PyMem_RawFree(verblock);
+        res = Py_BuildValue("(III)", major, minor, build);
+    }
+
+    PyMem_Free((void*)path);
+    if (!res) {
+        Py_RETURN_NONE;
+    }
+    return res;
+}
+
+
 /*
  * List of functions to add to pyfindvs in exec_pyfindvs().
  */
 static PyMethodDef pyfindvs_functions[] = {
     { "findall", (PyCFunction)pyfindvs_findall, METH_VARARGS | METH_KEYWORDS, pyfindvs_findall_doc },
+    { "getversion", (PyCFunction)pyfindvs_getversion, METH_VARARGS | METH_KEYWORDS, pyfindvs_getversion_doc },
     { NULL, NULL, 0, NULL } /* marks end of array */
 };
 
