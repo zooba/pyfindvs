@@ -52,7 +52,10 @@ EXT_MODULES = [Extension(
     'pyfindvs._helper',
     ['pyfindvs/pyfindvs.cpp'],
     include_dirs=[str(SETUP_CONFIG_H_PATH)],
-    library_dirs=[str(SETUP_CONFIG_LIB_PATH)]
+    library_dirs=[str(SETUP_CONFIG_LIB_PATH)],
+    # We use functions that are missing from python3.dll, so cannot actually do this
+    #py_limited_api=True,
+    #define_macros=[('Py_LIMITED_API', '0x03050000')],
 )]
 
 CLASSIFIERS = [

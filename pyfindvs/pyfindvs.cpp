@@ -223,7 +223,7 @@ PyObject *pyfindvs_getversion(PyObject *self, PyObject *args, PyObject *kwargs) 
     }
 
     if ((verblock_size = GetFileVersionInfoSizeW(path, NULL)) &&
-        (verblock = PyMem_RawMalloc(verblock_size))) {
+        (verblock = malloc(verblock_size))) {
         WORD *langinfo;
         wchar_t *verstr;
         UINT langinfo_size, ver_size;
@@ -239,7 +239,7 @@ PyObject *pyfindvs_getversion(PyObject *self, PyObject *args, PyObject *kwargs) 
                 res = PyUnicode_FromWideChar(verstr, ver_size - 1);
             }
         }
-        PyMem_RawFree(verblock);
+        free(verblock);
     }
 
     PyMem_Free((void*)path);
