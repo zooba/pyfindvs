@@ -224,7 +224,7 @@ PyObject *pyfindvs_getversion(PyObject *self, PyObject *args, PyObject *kwargs) 
 
     if ((verblock_size = GetFileVersionInfoSizeW(path, NULL)) &&
         (verblock = PyMem_RawMalloc(verblock_size))) {
-        WORD *langinfo
+        WORD *langinfo;
         wchar_t *verstr;
         UINT langinfo_size, ver_size;
 

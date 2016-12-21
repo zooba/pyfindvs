@@ -76,7 +76,6 @@ setup_cfg = dict(
     author_email='python@microsoft.com',
     url='https://github.com/zooba/pyfindvs',
     packages=PACKAGES,
-    cmdclass={'enable_msbuildcompiler': enable_msbuildcompiler.enable_msbuildcompiler},
     ext_modules=EXT_MODULES,
     install_requires=REQUIREMENTS,
     classifiers=CLASSIFIERS,
