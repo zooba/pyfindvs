@@ -41,6 +41,12 @@ SETUP_CONFIG_H_PATH = SETUP_CONFIG_PATH / 'lib' / 'native' / 'include'
 SETUP_CONFIG_LIB_PATH = SETUP_CONFIG_PATH / 'lib' / 'native' / 'v140' / PLATFORM
 SETUP_CONFIG_DLL_PATH = SETUP_CONFIG_PATH / 'tools' / PLATFORM
 
+ENTRY_POINTS = {
+    "distutils.commands": [
+        "enable_msbuildcompiler=pyfindvs.msbuildcompiler.enable_msbuildcompiler:enable_msbuildcompiler"
+    ],
+}
+
 from setuptools import Extension
 EXT_MODULES = [Extension(
     'pyfindvs._helper',
@@ -70,6 +76,7 @@ setup_cfg = dict(
     author_email='python@microsoft.com',
     url='https://github.com/zooba/pyfindvs',
     packages=PACKAGES,
+    cmdclass={'enable_msbuildcompiler': enable_msbuildcompiler.enable_msbuildcompiler},
     ext_modules=EXT_MODULES,
     install_requires=REQUIREMENTS,
     classifiers=CLASSIFIERS,

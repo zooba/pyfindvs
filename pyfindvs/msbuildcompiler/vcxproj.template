@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="">
+      <Configuration></Configuration>
+      <Platform></Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="Outputs" />
+  <ItemDefinitionGroup>
+    <ClCompile></ClCompile>
+    <Link></Link>
+    <Lib></Lib>
+    <RC></RC>
+    <Midl></Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup Label="Sources">
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="_CopyContentToOutput" BeforeTargets="AfterBuild" Inputs="@(Content)" Outputs="$(OutDir)%(Filename)%(Extension)">
+    <Copy SourceFiles="%(Content.FullPath)" DestinationFolder="$(OutDir)">
+      <Output TaskParameter="CopiedFiles" ItemName="FileWrites" />
+    </Copy>
+  </Target>
+</Project>

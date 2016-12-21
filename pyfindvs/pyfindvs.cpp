@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include <Strsafe.h>
 #include <Setup.Configuration.h>
 #pragma comment(lib, "ole32.lib")
 #pragma comment(lib, "oleaut32.lib")
@@ -204,7 +205,6 @@ Reads the product version from the specified file.");
 PyObject *pyfindvs_getversion(PyObject *self, PyObject *args, PyObject *kwargs) {
     LPVOID verblock;
     DWORD verblock_size;
-    DWORD major, minor, build;
 
     PyObject *res = NULL;
 
@@ -224,17 +224,22 @@ PyObject *pyfindvs_getversion(PyObject *self, PyObject *args, PyObject *kwargs) 
 
     if ((verblock_size = GetFileVersionInfoSizeW(path, NULL)) &&
         (verblock = PyMem_RawMalloc(verblock_size))) {
-        VS_FIXEDFILEINFO *ffi;
-        UINT ffi_len;
+        WORD *langinfo
+        wchar_t *verstr;
+        UINT langinfo_size, ver_size;
 
         if (GetFileVersionInfoW(path, 0, verblock_size, verblock) &&
-            VerQueryValueW(verblock, L"", (LPVOID*)&ffi, &ffi_len)) {
-            major = HIWORD(ffi->dwProductVersionMS);
-            minor = LOWORD(ffi->dwProductVersionMS);
-            build = HIWORD(ffi->dwProductVersionLS);
+            VerQueryValueW(verblock, L"\\VarFileInfo\\Translation", (LPVOID*)&langinfo, &langinfo_size)) {
+            wchar_t rsrc_name[256];
+            StringCchPrintfW(rsrc_name, 256, L"\\StringFileInfo\\%04x%04x\\ProductVersion", langinfo[0], langinfo[1]);
+            if (VerQueryValueW(verblock, rsrc_name, (LPVOID*)&verstr, &ver_size)) {
+                while (ver_size > 0 && !verstr[ver_size]) {
+                    ver_size -= 1;
+                }
+                res = PyUnicode_FromWideChar(verstr, ver_size - 1);
+            }
         }
         PyMem_RawFree(verblock);
-        res = Py_BuildValue("(III)", major, minor, build);
     }
 
     PyMem_Free((void*)path);
