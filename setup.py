@@ -13,14 +13,14 @@ import sys
 from pathlib import Path
 
 __author__ = 'Microsoft Corporation <python@microsoft.com>'
-__version__ = '0.3.0'
+__version__ = '0.4.0'
 
 AUTHOR_RE = re.match(r'(.+?)\s*\<(.+?)\>', __author__)
 
 with open('README', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
-PACKAGES = ['pyfindvs']
+PACKAGES = ['pyfindvs', 'pyfindvs.msbuildcompiler']
 REQUIREMENTS = []
 
 PLATFORM = 'x86'
@@ -88,6 +88,7 @@ setup_cfg = dict(
     ext_modules=EXT_MODULES,
     install_requires=REQUIREMENTS,
     classifiers=CLASSIFIERS,
+    entry_points=ENTRY_POINTS,
 )
 
 from setuptools import setup

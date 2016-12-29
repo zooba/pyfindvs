@@ -6,7 +6,7 @@
 #-------------------------------------------------------------------------
 
 __author__ = 'Steve Dower <steve.dower@microsoft.com>'
-__version__ = '0.3.0'
+__version__ = '0.4.0'
 
 import glob
 import os.path
