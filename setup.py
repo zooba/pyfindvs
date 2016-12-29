@@ -5,11 +5,17 @@
 # Distributed under the terms of the MIT License
 #-------------------------------------------------------------------------
 
+import re
 import setuptools
 import shutil
 import sys
 
 from pathlib import Path
+
+__author__ = 'Microsoft Corporation <python@microsoft.com>'
+__version__ = '0.3.0'
+
+AUTHOR_RE = re.match(r'(.+?)\s*\<(.+?)\>', __author__)
 
 with open('README', 'r', encoding='utf-8') as f:
     long_description = f.read()
@@ -72,11 +78,11 @@ CLASSIFIERS = [
 
 setup_cfg = dict(
     name='pyfindvs',
-    version='0.3.0',
+    version=__version__,
     description='Python module for locating Visual Studio',
     long_description=long_description,
-    author='Microsoft Corporation',
-    author_email='python@microsoft.com',
+    author=AUTHOR_RE.group(1),
+    author_email=AUTHOR_RE.group(2),
     url='https://github.com/zooba/pyfindvs',
     packages=PACKAGES,
     ext_modules=EXT_MODULES,
