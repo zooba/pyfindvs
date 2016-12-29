@@ -21,6 +21,10 @@ with open('README', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
 PACKAGES = ['pyfindvs', 'pyfindvs.msbuildcompiler']
+PACKAGE_DATA = {
+    'pyfindvs.msbuildcompiler': ['*.template'],
+}
+
 REQUIREMENTS = []
 
 PLATFORM = 'x86'
@@ -85,6 +89,7 @@ setup_cfg = dict(
     author_email=AUTHOR_RE.group(2),
     url='https://github.com/zooba/pyfindvs',
     packages=PACKAGES,
+    package_data=PACKAGE_DATA,
     ext_modules=EXT_MODULES,
     install_requires=REQUIREMENTS,
     classifiers=CLASSIFIERS,
