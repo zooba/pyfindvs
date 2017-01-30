@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 __author__ = 'Microsoft Corporation <python@microsoft.com>'
-__version__ = '0.4.0'
+__version__ = '0.5.0'
 
 AUTHOR_RE = re.match(r'(.+?)\s*\<(.+?)\>', __author__)
 

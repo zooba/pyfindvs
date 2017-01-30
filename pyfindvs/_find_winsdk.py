@@ -54,6 +54,7 @@ def findall():
         return []
 
     return [WindowsSDKInstance(
+        'winsdk10',
         'Windows 10 SDK',
         getversion(rc_exe),
         root_path,
