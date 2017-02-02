@@ -16,20 +16,22 @@ PyObject *error_from_hr(HRESULT hr)
     return nullptr;
 }
 
-PyObject *get_instance_id(ISetupInstance2 *inst)
-{
-    HRESULT hr;
-    BSTR name;
-    PyObject *str = nullptr;
-    if (FAILED(hr = inst->GetInstanceId(&name)))
-        goto error;
-    str = PyUnicode_FromWideChar(name, SysStringLen(name));
-    SysFreeString(name);
-    return str;
-error:
+#define MAKE_STRING_GETTER(NAME, INTF, FUNC) \
+    PyObject *NAME(INTF *inst) { \
+        HRESULT hr; \
+        BSTR bstr; \
+        PyObject *str = nullptr; \
+        if (FAILED(hr = inst-> FUNC (&bstr))) \
+            return error_from_hr(hr); \
+        str = PyUnicode_FromWideChar(bstr, SysStringLen(bstr)); \
+        SysFreeString(bstr); \
+        return str; \
+    }
 
-    return error_from_hr(hr);
-}
+MAKE_STRING_GETTER(get_instance_id, ISetupInstance2, GetInstanceId);
+MAKE_STRING_GETTER(get_install_version, ISetupInstance, GetInstallationVersion);
+MAKE_STRING_GETTER(get_install_path, ISetupInstance, GetInstallationPath);
+MAKE_STRING_GETTER(get_engine_path, ISetupInstance2, GetEnginePath);
 
 PyObject *get_install_name(ISetupInstance2 *inst)
 {
@@ -37,44 +39,15 @@ PyObject *get_install_name(ISetupInstance2 *inst)
     BSTR name;
     PyObject *str = nullptr;
     if (FAILED(hr = inst->GetDisplayName(LOCALE_USER_DEFAULT, &name)))
-        goto error;
+        return error_from_hr(hr);
     str = PyUnicode_FromWideChar(name, SysStringLen(name));
     SysFreeString(name);
     return str;
-error:
-
-    return error_from_hr(hr);
 }
 
-PyObject *get_install_version(ISetupInstance *inst)
-{
-    HRESULT hr;
-    BSTR ver;
-    PyObject *str = nullptr;
-    if (FAILED(hr = inst->GetInstallationVersion(&ver)))
-        goto error;
-    str = PyUnicode_FromWideChar(ver, SysStringLen(ver));
-    SysFreeString(ver);
-    return str;
-error:
-
-    return error_from_hr(hr);
-}
-
-PyObject *get_install_path(ISetupInstance *inst)
-{
-    HRESULT hr;
-    BSTR path;
-    PyObject *str = nullptr;
-    if (FAILED(hr = inst->GetInstallationPath(&path)))
-        goto error;
-    str = PyUnicode_FromWideChar(path, SysStringLen(path));
-    SysFreeString(path);
-    return str;
-error:
-
-    return error_from_hr(hr);
-}
+MAKE_STRING_GETTER(get_package_id, ISetupPackageReference, GetId);
+MAKE_STRING_GETTER(get_package_version, ISetupPackageReference, GetVersion);
+MAKE_STRING_GETTER(get_package_type, ISetupPackageReference, GetType);
 
 PyObject *get_installed_packages(ISetupInstance2 *inst)
 {
@@ -93,26 +66,24 @@ PyObject *get_installed_packages(ISetupInstance2 *inst)
 
     for (LONG i = 0; i < ub; ++i) {
         ISetupPackageReference *package = nullptr;
-        BSTR id = nullptr;
-        PyObject *str = nullptr;
+        PyObject *id = nullptr;
+        PyObject *version = nullptr;
+        PyObject *type = nullptr;
 
         if (FAILED(hr = packages[i]->QueryInterface(&package)) ||
-            FAILED(hr = package->GetId(&id)))
+            !(id = get_package_id(package)) ||
+            !(version = get_package_version(package)) ||
+            !(type = get_package_type(package)) ||
+            PyList_Append(res, PyTuple_Pack(3, id, version, type)) < 0)
             goto iter_error;
 
-        str = PyUnicode_FromWideChar(id, SysStringLen(id));
-        SysFreeString(id);
-
-        if (!str || PyList_Append(res, str) < 0)
-            goto iter_error;
-
-        Py_CLEAR(str);
         package->Release();
         continue;
 
     iter_error:
         if (package) package->Release();
-        Py_XDECREF(str);
+        Py_XDECREF(version);
+        Py_XDECREF(id);
 
         goto error;
     }
@@ -165,6 +136,7 @@ PyObject *find_all_instances()
         PyObject *name = nullptr;
         PyObject *version = nullptr;
         PyObject *path = nullptr;
+        PyObject *engine = nullptr;
         PyObject *packages = nullptr;
 
         if (FAILED(hr = inst->QueryInterface(&inst2)) ||
@@ -172,14 +144,16 @@ PyObject *find_all_instances()
             !(name = get_install_name(inst2)) ||
             !(version = get_install_version(inst)) ||
             !(path = get_install_path(inst)) ||
+            !(engine = get_engine_path(inst2)) ||
             !(packages = get_installed_packages(inst2)) ||
-            PyList_Append(res, PyTuple_Pack(5, id, name, version, path, packages)) < 0)
+            PyList_Append(res, PyTuple_Pack(6, id, name, version, path, engine, packages)) < 0)
             goto iter_error;
 
         continue;
     iter_error:
         if (inst2) inst2->Release();
         Py_XDECREF(packages);
+        Py_XDECREF(engine);
         Py_XDECREF(path);
         Py_XDECREF(version);
         Py_XDECREF(name);

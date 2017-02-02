@@ -38,7 +38,7 @@ SETUP_CONFIG_PACKAGES = list((SETUP_ROOT / 'packages').glob(SETUP_CONFIG_PACKAGE
 if not SETUP_CONFIG_PACKAGES:
     from subprocess import check_call
     from urllib.request import urlretrieve
-    print('Installing depedencies...')
+    print('Installing dependencies...')
     if (SETUP_ROOT / 'nuget.exe').is_file():
         nuget = str(SETUP_ROOT / 'nuget.exe')
     else:
