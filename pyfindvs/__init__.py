@@ -6,7 +6,7 @@
 #-------------------------------------------------------------------------
 
 __author__ = 'Steve Dower <steve.dower@microsoft.com>'
-__version__ = '0.3.0'
+__version__ = '0.4.0'
 
 import glob
 import os.path
@@ -70,7 +70,8 @@ def _get_known_paths(path, version_info, packages):
         return {}
 
 class VisualStudioInstance:
-    def __init__(self, name, version, path, packages, known_paths=None):
+    def __init__(self, instance_id, name, version, path, packages, known_paths=None):
+        self.instance_id = instance_id
         self.name = name
         self.version = version
         self.version_info = _make_versioninfo(version)
@@ -103,7 +104,10 @@ def findall(reset_cache=False):
     global _findall_cache
     r = _findall_cache
     if not r or reset_cache:
-        r = [VisualStudioInstance(*v) for v in _findall()]
+        try:
+            r = [VisualStudioInstance(*v) for v in _findall()]
+        except OSError:
+            r = []
         import pyfindvs._find_vs2015, pyfindvs._find_winsdk
         r.extend(pyfindvs._find_vs2015.findall())
         r.extend(pyfindvs._find_winsdk.findall())

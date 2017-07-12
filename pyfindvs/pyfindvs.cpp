@@ -16,6 +16,21 @@ PyObject *error_from_hr(HRESULT hr)
     return nullptr;
 }
 
+PyObject *get_instance_id(ISetupInstance2 *inst)
+{
+    HRESULT hr;
+    BSTR name;
+    PyObject *str = nullptr;
+    if (FAILED(hr = inst->GetInstanceId(&name)))
+        goto error;
+    str = PyUnicode_FromWideChar(name, SysStringLen(name));
+    SysFreeString(name);
+    return str;
+error:
+
+    return error_from_hr(hr);
+}
+
 PyObject *get_install_name(ISetupInstance2 *inst)
 {
     HRESULT hr;
@@ -146,17 +161,19 @@ PyObject *find_all_instances()
         goto error;
 
     while (SUCCEEDED(enm->Next(1, &inst, &fetched)) && fetched) {
+        PyObject *id = nullptr;
         PyObject *name = nullptr;
         PyObject *version = nullptr;
         PyObject *path = nullptr;
         PyObject *packages = nullptr;
 
         if (FAILED(hr = inst->QueryInterface(&inst2)) ||
+            !(id = get_instance_id(inst2)) ||
             !(name = get_install_name(inst2)) ||
             !(version = get_install_version(inst)) ||
             !(path = get_install_path(inst)) ||
             !(packages = get_installed_packages(inst2)) ||
-            PyList_Append(res, PyTuple_Pack(4, name, version, path, packages)) < 0)
+            PyList_Append(res, PyTuple_Pack(5, id, name, version, path, packages)) < 0)
             goto iter_error;
 
         continue;
@@ -166,6 +183,7 @@ PyObject *find_all_instances()
         Py_XDECREF(path);
         Py_XDECREF(version);
         Py_XDECREF(name);
+        Py_XDECREF(id);
         goto error;
     }
 

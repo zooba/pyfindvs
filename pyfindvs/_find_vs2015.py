@@ -54,9 +54,10 @@ def findall():
 
     packages = (p for p in (_PACKAGE_MAP.get(key) for key in known_paths) if p)
 
-    root_path = os.path.dirname(os.path.dirname(msenv))
+    root_path = os.path.dirname(os.path.dirname(os.path.dirname(msenv)))
 
     return [VisualStudioInstance(
+        'vs2015',
         'Visual Studio 2015',
         getversion(msenv),
         root_path,
