@@ -6,9 +6,9 @@
 #-------------------------------------------------------------------------
 
 import os.path
-from pyfindvs import VisualStudioInstance, _join_and_glob, _PACKAGE_MAP
-from pyfindvs._helper import getversion
-from pyfindvs.reghelper import HKLM_32
+from . import VisualStudioInstance, _join_and_glob, _PACKAGE_MAP
+from ._helper import getversion
+from .reghelper import HKLM_32
 
 _VS2015_KEYS = [
     # We include msenv.dll to find the version number, but remove it before returning

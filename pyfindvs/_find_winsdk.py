@@ -6,9 +6,9 @@
 #-------------------------------------------------------------------------
 
 import os.path
-from pyfindvs import _join_and_glob, WindowsSDKInstance
-from pyfindvs._helper import getversion
-from pyfindvs.reghelper import HKLM_32
+from . import _join_and_glob, WindowsSDKInstance
+from ._helper import getversion
+from .reghelper import HKLM_32
 
 _WIN10SDK_KEYS = [
     # Added just for detection purposes, and removed before returning

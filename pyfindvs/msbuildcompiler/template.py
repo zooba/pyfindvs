@@ -6,7 +6,7 @@
 #-------------------------------------------------------------------------
 
 from io import BytesIO
-from pyfindvs.msbuildcompiler.options import GlobalOptionsBase, ItemOptionsBase
+from .options import GlobalOptionsBase, ItemOptionsBase
 
 import pkgutil
 import os.path

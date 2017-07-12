@@ -5,4 +5,5 @@
 # Distributed under the terms of the MIT License
 #-------------------------------------------------------------------------
 
-from pyfindvs.msbuildcompiler.compiler import MSBuildCompiler
+from .compiler import MSBuildCompiler
+from .enable_msbuildcompiler import enable as enable_compiler

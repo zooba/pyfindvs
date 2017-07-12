@@ -15,8 +15,8 @@ from copy import copy
 from io import TextIOWrapper
 from pyfindvs import findwithany
 
-from pyfindvs.msbuildcompiler.options import *
-from pyfindvs.msbuildcompiler.template import Template
+from .options import *
+from .template import Template
 
 import os.path
 import subprocess

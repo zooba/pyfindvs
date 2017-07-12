@@ -10,7 +10,7 @@ __version__ = '0.3.0'
 
 import glob
 import os.path
-import pyfindvs._helper as _helper
+from ._helper import findall as _findall
 
 __all__ = ['VisualStudioInstance', 'findall', 'findwithall', 'findwithany']
 
@@ -63,7 +63,7 @@ def _get_known_paths(path, version_info, packages):
     if not path or not version_info or len(version_info) < 2:
         return {}
 
-    if version_info[:2] == (15, 0):
+    if version_info[0] == 15:
         return {k: _join_and_glob(path, v) for k, v in _VS2017_PATHS.items()
                 if k not in _PACKAGE_MAP or _PACKAGE_MAP[k] in packages}
     else:
@@ -103,7 +103,7 @@ def findall(reset_cache=False):
     global _findall_cache
     r = _findall_cache
     if not r or reset_cache:
-        r = [VisualStudioInstance(*v) for v in _helper.findall()]
+        r = [VisualStudioInstance(*v) for v in _findall()]
         import pyfindvs._find_vs2015, pyfindvs._find_winsdk
         r.extend(pyfindvs._find_vs2015.findall())
         r.extend(pyfindvs._find_winsdk.findall())
