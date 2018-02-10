@@ -7,10 +7,13 @@
 
 class OptionsBase:
     def _add_opt(self, opt_name, right_arg, sep=';'):
-        if not right_arg:
-            return
         if not isinstance(right_arg, str):
-            right_arg = sep.join(right_arg)
+            try:
+                it = iter(right_arg)
+            except TypeError:
+                pass
+            else:
+                right_arg = sep.join(str(i) for i in it)
         existing = getattr(self, opt_name, None)
         if not existing:
             setattr(self, opt_name, right_arg)
@@ -18,8 +21,6 @@ class OptionsBase:
         setattr(self, opt_name, '{}{}{}'.format(existing, sep, right_arg))
 
     def _set_opt(self, opt_name, right_arg, warn_if_invalid=True):
-        if not right_arg:
-            right_arg = ''
         if not hasattr(self, opt_name):
             if warn_if_invalid:
                 # TODO: warn
@@ -52,14 +53,15 @@ class GlobalOptions(GlobalOptionsBase):
 
     Configuration = "Release"
     DefaultWindowsSDKVersion = ""
+    GenerateManifest = True
     Platform = "Win32"
     PlatformToolset = "v140"
     IntDir = ""
-    UseDebugLibraries = "false"
+    UseDebugLibraries = False
 
     def _for_debug(self):
         self.Configuration = "Debug"
-        self.UseDebugLibraries = "true"
+        self.UseDebugLibraries = True
 
     def _for_plat(self, plat):
         if plat == 'win32':
@@ -83,9 +85,9 @@ class OutputOptions(GlobalOptionsBase):
 class ClCompileOptions(ItemOptionsBase):
     _ItemDefinitionGroup = "ClCompile"
 
-    AdditionalIncludeDirectories       = ""
-    AdditionalOptions                  = ""
-    AdditionalUsingDirectories         = ""
+    AdditionalIncludeDirectories       = "%(AdditionalIncludeDirectories)"
+    AdditionalOptions                  = "%(AdditionalOptions)"
+    AdditionalUsingDirectories         = "%(AdditionalUsingDirectories)"
     AssemblerListingLocation           = ""
     AssemblerOutput                    = ""
     BasicRuntimeChecks                 = ""
@@ -112,13 +114,13 @@ class ClCompileOptions(ItemOptionsBase):
     FloatingPointExceptions            = ""
     FloatingPointModel                 = ""
     ForceConformanceInForLoopScope     = ""
-    ForcedIncludeFiles                 = ""
-    ForcedUsingFiles                   = ""
-    FunctionLevelLinking               = "true"
+    ForcedIncludeFiles                 = "%(ForcedIncludeFiles)"
+    ForcedUsingFiles                   = "%(ForcedUsingFiles)"
+    FunctionLevelLinking               = True
     GenerateXMLDocumentationFiles      = ""
     IgnoreStandardIncludePath          = ""
     InlineFunctionExpansion            = ""
-    IntrinsicFunctions                 = "true"
+    IntrinsicFunctions                 = True
     MinimalRebuild                     = ""
     MultiProcessorCompilation          = ""
     ObjectFileName                     = ""
@@ -133,7 +135,7 @@ class ClCompileOptions(ItemOptionsBase):
     PREfastAdditionalPlugins           = ""
     PREfastLog                         = ""
     PreprocessKeepComments             = ""
-    PreprocessorDefinitions            = ""
+    PreprocessorDefinitions            = "%(PreprocessorDefinitions)"
     PreprocessSuppressLineNumbers      = ""
     PreprocessToFile                   = ""
     ProcessorNumber                    = ""
@@ -152,7 +154,7 @@ class ClCompileOptions(ItemOptionsBase):
     TreatWarningAsError                = ""
     TreatWChar_tAsBuiltInType          = ""
     UndefineAllPreprocessorDefinitions = ""
-    UndefinePreprocessorDefinitions    = ""
+    UndefinePreprocessorDefinitions    = "%(UndefinePreprocessorDefinitions)"
     UseFullPaths                       = ""
     UseUnicodeForAssemblerListing      = ""
     WarningLevel                       = "Level3"
@@ -162,8 +164,8 @@ class ClCompileOptions(ItemOptionsBase):
     CreateHotpatchableImage            = ""
 
     def _for_debug(self):
-        self.FunctionLevelLinking = "false"
-        self.IntrinsicFunctions = "false"
+        self.FunctionLevelLinking = False
+        self.IntrinsicFunctions = False
         self.Optimization = "Disabled"
         self.RuntimeLibrary = "MultithreadedDLL"
 
@@ -172,10 +174,10 @@ class ClCompileOptions(ItemOptionsBase):
 class LinkOptions(ItemOptionsBase):
     _ItemDefinitionGroup = "Link"
 
-    AdditionalDependencies         = ""
-    AdditionalLibraryDirectories   = ""
-    AdditionalManifestDependencies = ""
-    AdditionalOptions              = ""
+    AdditionalDependencies         = "%(AdditionalDependencies)"
+    AdditionalLibraryDirectories   = "%(AdditionalLibraryDirectories)"
+    AdditionalManifestDependencies = "%(AdditionalManifestDependencies)"
+    AdditionalOptions              = "%(AdditionalOptions)"
     AddModuleNamesToAssembly       = ""
     AllowIsolation                 = ""
     AppContainer                   = ""
@@ -190,7 +192,7 @@ class LinkOptions(ItemOptionsBase):
     DataExecutionPrevention        = ""
     DelayLoadDLLs                  = ""
     Driver                         = ""
-    EnableCOMDATFolding            = "true"
+    EnableCOMDATFolding            = True
     EnableUAC                      = ""
     EntryPointSymbol               = ""
     LinkErrorReporting             = ""
@@ -198,7 +200,7 @@ class LinkOptions(ItemOptionsBase):
     ForceFileOutput                = ""
     ForceSymbolReferences          = ""
     FunctionOrder                  = ""
-    GenerateDebugInformation       = "true"
+    GenerateDebugInformation       = True
     # Global property
     #GenerateManifest               = "$(GenerateManifest)"
     GenerateMapFile                = ""
@@ -228,7 +230,7 @@ class LinkOptions(ItemOptionsBase):
     MinimumRequiredVersion         = ""
     ModuleDefinitionFile           = ""
     MSDOSStubFileName              = ""
-    OptimizeReferences             = "true"
+    OptimizeReferences             = True
     OutputFile                     = ""
     PreventDllBinding              = ""
     Profile                        = ""
@@ -265,16 +267,16 @@ class LinkOptions(ItemOptionsBase):
     WindowsMetadataSignHash        = ""
 
     def _for_debug(self):
-        self.EnableCOMDATFolding = "false"
-        self.OptimizeReferences = "false"
+        self.EnableCOMDATFolding = False
+        self.OptimizeReferences = False
 
     def _for_plat(self, plat): pass
 
 class LibOptions(ItemOptionsBase):
     _ItemDefinitionGroup = "Lib"
 
-    AdditionalDependencies          = ""
-    AdditionalLibraryDirectories    = ""
+    AdditionalDependencies          = "%(AdditionalDependencies)"
+    AdditionalLibraryDirectories    = "%(AdditionalLibraryDirectories)"
     # Global property
     #AdditionalOptions               = ""
     DisplayLibrary                  = ""
@@ -282,7 +284,7 @@ class LibOptions(ItemOptionsBase):
     ExportNamedFunctions            = ""
     ForceSymbolReferences           = ""
     IgnoreAllDefaultLibraries       = ""
-    IgnoreSpecificDefaultLibraries  = ""
+    IgnoreSpecificDefaultLibraries  = "%(IgnoreSpecificDefaultLibraries)"
     LinkTimeCodeGeneration          = ""
     ModuleDefinitionFile            = ""
     Name                            = ""
@@ -298,19 +300,19 @@ class LibOptions(ItemOptionsBase):
     def _for_plat(self, plat): pass
 
 class RcOptions(ItemOptionsBase):
-    _ItemDefinitionGroup = "RC"
+    _ItemDefinitionGroup = "ResourceCompile"
 
-    AdditionalIncludeDirectories    = ""
-    AdditionalOptions               = ""
+    AdditionalIncludeDirectories    = "%(AdditionalIncludeDirectories)"
+    AdditionalOptions               = "%(AdditionalOptions)"
     Culture                         = ""
     IgnoreStandardIncludePath       = ""
 
     NullTerminateStrings            = ""
-    PreprocessorDefinitions         = ""
+    PreprocessorDefinitions         = "%(PreprocessorDefinitions)"
     ResourceOutputFileName          = ""
     SuppressStartupBanner           = ""
     ShowProgress                    = ""
-    UndefinePreprocessorDefinitions = ""
+    UndefinePreprocessorDefinitions = "%(UndefinePreprocessorDefinitions)"
 
     def _for_debug(self): pass
     def _for_plat(self, plat): pass
@@ -318,9 +320,9 @@ class RcOptions(ItemOptionsBase):
 class MidlOptions(ItemOptionsBase):
     _ItemDefinitionGroup = "Midl"
 
-    AdditionalIncludeDirectories        = ""
-    AdditionalMetadataDirectories       = ""
-    AdditionalOptions                   = ""
+    AdditionalIncludeDirectories        = "%(AdditionalIncludeDirectories)"
+    AdditionalMetadataDirectories       = "%(AdditionalMetadataDirectories)"
+    AdditionalOptions                   = "%(AdditionalOptions)"
     ApplicationConfigurationMode        = ""
     ClientStubFile                      = ""
     CPreprocessOptions                  = ""
@@ -348,7 +350,7 @@ class MidlOptions(ItemOptionsBase):
     MetadataFileName                    = ""
     OutputDirectory                     = ""
     PrependWithABINamepsace             = ""
-    PreprocessorDefinitions             = ""
+    PreprocessorDefinitions             = "%(PreprocessorDefinitions)"
     ProxyFileName                       = ""
     RedirectOutputAndErrors             = ""
     ServerStubFile                      = ""
@@ -358,7 +360,7 @@ class MidlOptions(ItemOptionsBase):
     TargetEnvironment                   = ""
     TypeLibFormat                       = ""
     TypeLibraryName                     = ""
-    UndefinePreprocessorDefinitions     = ""
+    UndefinePreprocessorDefinitions     = "%(UndefinePreprocessorDefinitions)"
     ValidateAllParameters               = ""
     WarnAsError                         = ""
     WarningLevel                        = ""

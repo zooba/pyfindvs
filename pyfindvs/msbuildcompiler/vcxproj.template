@@ -19,7 +19,7 @@
     <ClCompile></ClCompile>
     <Link></Link>
     <Lib></Lib>
-    <RC></RC>
+    <ResourceCompile></ResourceCompile>
     <Midl></Midl>
   </ItemDefinitionGroup>
   <ItemGroup Label="Sources">

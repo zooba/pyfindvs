@@ -40,6 +40,9 @@ class Template:
                     if prop_name[0] not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
                         continue
                     value = getattr(opts, prop_name)
+                    value = '' if value is None else str(value)
+                    if value == '$({0})'.format(prop_name):
+                        value == None
                     e = go.find("n:" + prop_name, self._NSD)
                     if e:
                         if value:
@@ -56,9 +59,9 @@ class Template:
                     if prop_name[0] not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
                         continue
                     value = getattr(opts, prop_name)
-                    if not value:
+                    if value is None or value == '' or value == '%({0})'.format(prop_name):
                         continue
-                    ET.SubElement(idg, prop_name).text = value
+                    ET.SubElement(idg, prop_name).text = str(value)
             else:
                 raise TypeError("unsupported options '{}'".format(type(opts)))
 

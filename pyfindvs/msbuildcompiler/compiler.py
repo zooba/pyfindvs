@@ -150,7 +150,7 @@ class MSBuildCompiler(object):
         '.c': 'ClCompile',
         '.cpp': 'ClCompile',
         '.cxx': 'ClCompile',
-        '.rc': 'RC',
+        '.rc': 'ResourceCompile',
         '.idl': 'Midl',
     }
 
