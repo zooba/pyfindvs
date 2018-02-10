@@ -13,7 +13,7 @@ import sys
 from pathlib import Path
 
 __author__ = 'Microsoft Corporation <python@microsoft.com>'
-__version__ = '0.5.0'
+__version__ = '0.6.0'
 
 AUTHOR_RE = re.match(r'(.+?)\s*\<(.+?)\>', __author__)
 
@@ -69,14 +69,14 @@ EXT_MODULES = [Extension(
 )]
 
 CLASSIFIERS = [
-    'Development Status :: 3 - Alpha',
+    'Development Status :: 4 - Beta',
     'Environment :: Win32 (MS Windows)',
     'License :: OSI Approved :: MIT License',
     'Natural Language :: English',
     'Operating System :: Microsoft :: Windows',
     'Programming Language :: Python',
-    'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3 :: Only',
 ]
 
