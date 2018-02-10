@@ -90,6 +90,13 @@ class MSBuildCompiler(object):
 
         self.msbuild = self.vc_env['msbuild.exe']
 
+        if not self.options.DefaultWindowsSDKVersion:
+            try:
+                sdkver = max(v.version_info for v in instances if v.instance_id == 'winsdk10')
+            except ValueError:
+                sdkver = 8, 1
+            self.options.DefaultWindowsSDKVersion = '.'.join(str(i) for i in sdkver)
+
         # When vcruntime140.dll becomes necessary, we should restore this code
         #vcruntime = self.vc_env.get('vcruntime140.dll')
         #if vcruntime:

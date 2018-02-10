@@ -51,6 +51,7 @@ class GlobalOptions(GlobalOptionsBase):
     _PropertyGroup = "Globals"
 
     Configuration = "Release"
+    DefaultWindowsSDKVersion = ""
     Platform = "Win32"
     PlatformToolset = "v140"
     IntDir = ""
