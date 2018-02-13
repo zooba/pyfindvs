@@ -86,7 +86,7 @@ class MSBuildCompiler(object):
 
         self._tool_key_suffix = _TOOL_KEY_SUFFIX[plat_name]
         self.vc_env = ChainMap(*(inst.known_paths
-            for inst in sorted(instances, key=lambda i: i.version_info)))
+            for inst in sorted(instances, key=lambda i: i.version_info, reverse=True)))
 
         self.msbuild = self.vc_env['msbuild.exe']
 
