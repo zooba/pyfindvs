@@ -89,6 +89,8 @@ class MSBuildCompiler(object):
             for inst in sorted(instances, key=lambda i: i.version_info, reverse=True)))
 
         self.msbuild = self.vc_env['msbuild.exe']
+        if 'MSVC\\14.1' in self.vc_env.get('cl.exe'):
+            self.options.PlatformToolset = 'v141'
 
         if not self.options.DefaultWindowsSDKVersion:
             try:
