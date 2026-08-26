@@ -137,6 +137,7 @@ def _ensure_setup_configuration_package():
                     parts = member_name.split("/")
                     if (
                         os.path.isabs(member_name)
+                        or parts[0] == ""
                         or (len(parts[0]) == 2 and parts[0][1] == ":")
                         or any(not part or part in (".", "..") for part in parts)
                     ):
