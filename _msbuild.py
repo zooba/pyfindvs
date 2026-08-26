@@ -131,7 +131,7 @@ def _ensure_setup_configuration_package():
                 extract_dir.mkdir()
                 extract_root = os.path.abspath(extract_dir)
                 for member in package.infolist():
-                    destination = os.path.abspath(extract_dir / member.filename)
+                    destination = os.path.abspath(os.path.join(extract_root, member.filename))
                     try:
                         is_within_extract_dir = (
                             os.path.commonpath((extract_root, destination)) == extract_root
