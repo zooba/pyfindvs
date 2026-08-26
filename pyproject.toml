@@ -1,0 +1,6 @@
+[build-system]
+requires = ["pymsbuild>=1.2,<2"]
+build-backend = "pymsbuild"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

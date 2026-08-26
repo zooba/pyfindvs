@@ -1,0 +1,2 @@
+[distutils.commands]
+enable_msbuildcompiler = pyfindvs.msbuildcompiler.enable_msbuildcompiler:enable_msbuildcompiler

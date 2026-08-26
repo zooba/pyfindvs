@@ -1,2 +1,0 @@
-include pyfindvs/msbuildcompiler/vcxproj.template
-include pyfindvs/pyfindvs.cpp

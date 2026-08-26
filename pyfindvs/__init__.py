@@ -5,8 +5,8 @@
 # Distributed under the terms of the MIT License
 #-------------------------------------------------------------------------
 
-__author__ = 'Steve Dower <steve.dower@microsoft.com>'
-__version__ = '0.4.0'
+__author__ = 'Steve Dower <steve.dower@python.org>'
+__version__ = '0.7.0'
 
 import glob
 import os.path
@@ -38,7 +38,17 @@ _PACKAGE_MAP = {
     'vcvarsall.bat': 'Microsoft.VisualCpp.Tools.Core'
 }
 
-_VS2017_PATHS = {
+# These path templates describe the on-disk layout that has been used by the
+# "setup.exe"-based (a.k.a. "vNext") family of Visual Studio installers, which
+# started with Visual Studio 2017 (major version 15) and has been kept stable
+# ever since (Visual Studio 2019/16.0, 2022/17.0, 2026/18.0, ...). Rather than
+# hard-coding a specific year/version, we key off of the presence of this COM-
+# discoverable installation layout, which is reported via ISetupInstance's
+# InstallationVersion (see pyfindvs.cpp) and covers every VS instance found
+# through the Setup Configuration API.
+_MIN_SETUP_API_VERSION = 15
+
+_VS_PATHS = {
     'msbuild.exe': r'MSBuild\*\Bin\msbuild.exe',
     'msbuild.exe_x64': r'MSBuild\*\Bin\amd64\msbuild.exe',
     'devenv.exe': r'Common7\IDE\devenv.exe',
@@ -53,18 +63,22 @@ for tool in ['cl.exe', 'link.exe', 'lib.exe']:
         tool + '_x64': 'Microsoft.VisualCpp.Tools.HostX64.TargetX64',
         tool + '_x86_64': 'Microsoft.VisualCpp.Tools.HostX64.TargetX86'
     })
-    _VS2017_PATHS.update({
+    _VS_PATHS.update({
         tool: 'VC\\Tools\\MSVC\\*\\bin\\HostX86\\x86\\' + tool,
         tool + '_x64': 'VC\\Tools\\MSVC\\*\\bin\\HostX64\\x64\\' + tool,
         tool + '_x86_64': 'VC\\Tools\\MSVC\\*\\bin\\HostX86\\x64\\' + tool,
     })
 
+# Retained for backwards compatibility with anything importing the old name.
+_VS2017_PATHS = _VS_PATHS
+
+
 def _get_known_paths(path, version_info, packages):
     if not path or not version_info or len(version_info) < 2:
         return {}
 
-    if version_info[0] == 15:
-        return {k: _join_and_glob(path, v) for k, v in _VS2017_PATHS.items()
+    if version_info[0] >= _MIN_SETUP_API_VERSION:
+        return {k: _join_and_glob(path, v) for k, v in _VS_PATHS.items()
                 if k not in _PACKAGE_MAP or _PACKAGE_MAP[k] in packages}
     else:
         return {}
