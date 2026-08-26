@@ -105,6 +105,14 @@ PACKAGE = Package(
 _SETUP_CONFIG_PACKAGE_NAME = "Microsoft.VisualStudio.Setup.Configuration.Native"
 _SETUP_CONFIG_PACKAGE_VERSION = "3.14.2075"
 
+# The package's lib directories are not named after the MSBuild $(Platform)
+# values, so map from the wheel platform tag to the directory in the package.
+_SETUP_CONFIG_LIB_DIRS = {
+    "win32": "x86",
+    "win_amd64": "x64",
+    "win_arm64": "arm64",
+}
+
 
 def _ensure_setup_configuration_package():
     packages_dir = ROOT / "packages"
@@ -163,11 +171,17 @@ def init_PACKAGE(tag=None):
     if not tag or sys.platform != "win32":
         return
 
+    # 'tag' is the full wheel tag, e.g. "cp313-cp313-win_amd64", and its
+    # platform is what we are (cross-)compiling for.
+    platform_tag = tag.rpartition("-")[2]
+    try:
+        lib_platform = _SETUP_CONFIG_LIB_DIRS[platform_tag]
+    except KeyError:
+        raise RuntimeError("unsupported platform {}".format(platform_tag))
+
     native_dir = _ensure_setup_configuration_package() / "lib" / "native"
     include_dir = native_dir / "include"
-    # $(Platform) is resolved by MSBuild itself (Win32/x64/ARM64), so the
-    # correct one is always picked regardless of what we build on.
-    lib_dir = native_dir / "v141" / "$(Platform)"
+    lib_dir = native_dir / "v141" / lib_platform
 
     _SETUP_CONFIG_INCLUDE.options["AdditionalIncludeDirectories"] = Prepend("{};".format(include_dir))
     _SETUP_CONFIG_LIB.options["AdditionalLibraryDirectories"] = Prepend("{};".format(lib_dir))

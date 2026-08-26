@@ -1,0 +1,52 @@
+name: Python headers and libs from NuGet
+description: >
+  Downloads the CPython NuGet package matching a Python version and Windows
+  platform, and sets the PYMSBUILD_* variables needed to (cross-)compile a
+  wheel for it.
+
+inputs:
+  python-version:
+    description: Python feature version to build for, e.g. '3.13'
+    required: true
+  platform:
+    description: "Wheel platform tag: win32, win_amd64 or win_arm64"
+    required: true
+
+runs:
+  using: composite
+  steps:
+  - name: Fetch Python ${{ inputs.python-version }} for ${{ inputs.platform }}
+    shell: pwsh
+    env:
+      PYFINDVS_PYTHON_VERSION: ${{ inputs.python-version }}
+      PYFINDVS_PLATFORM: ${{ inputs.platform }}
+    run: |
+      $package = switch ($env:PYFINDVS_PLATFORM) {
+          'win32'     { 'pythonx86' }
+          'win_amd64' { 'python' }
+          'win_arm64' { 'pythonarm64' }
+          default { throw "Unsupported platform '$($env:PYFINDVS_PLATFORM)'" }
+      }
+      $feed = 'https://api.nuget.org/v3-flatcontainer'
+      $prefix = "$($env:PYFINDVS_PYTHON_VERSION)."
+      $versions = @((Invoke-RestMethod "$feed/$package/index.json").versions |
+          Where-Object { $_.StartsWith($prefix) })
+      # Versions come back in ascending order, so the last one wins. Only fall
+      # back to a pre-release if there is no final release yet.
+      $stable = @($versions | Where-Object { -not $_.Contains('-') })
+      $candidates = if ($stable) { $stable } else { $versions }
+      if (-not $candidates) {
+          throw "No $package package for Python $($env:PYFINDVS_PYTHON_VERSION) on nuget.org"
+      }
+      $version = $candidates[-1]
+      Write-Host "Using $package $version"
+      $dest = Join-Path $env:RUNNER_TEMP "$package.$version"
+      if (-not (Test-Path $dest)) {
+          $nupkg = "$dest.zip"
+          Invoke-WebRequest "$feed/$package/$version/$package.$version.nupkg" -OutFile $nupkg
+          Expand-Archive $nupkg -DestinationPath $dest
+      }
+      $abi = 'cp' + $env:PYFINDVS_PYTHON_VERSION.Replace('.', '')
+      "PYMSBUILD_PYTHON_INCLUDES=$dest\tools\include" >> $env:GITHUB_ENV
+      "PYMSBUILD_PYTHON_LIBS=$dest\tools\libs" >> $env:GITHUB_ENV
+      "PYMSBUILD_WHEEL_TAG=$abi-$abi-$($env:PYFINDVS_PLATFORM)" >> $env:GITHUB_ENV

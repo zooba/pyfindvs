@@ -34,3 +34,14 @@ jobs:
       run: python -m pymsbuild sdist
     - name: Check self build (wheel)
       run: python -m pymsbuild wheel
+    # ARM64 cannot run on the (x64) runner, so only check that it compiles.
+    # There are no ARM64 builds of CPython before 3.9.
+    - name: Get Python ${{ matrix.python-version }} headers and libs (ARM64)
+      if: matrix.python-version != '3.8'
+      uses: ./.github/actions/python-nuget
+      with:
+        python-version: ${{ matrix.python-version }}
+        platform: win_arm64
+    - name: Check cross build (win_arm64 wheel)
+      if: matrix.python-version != '3.8'
+      run: python -m pymsbuild --temp-dir build/arm64 wheel

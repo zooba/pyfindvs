@@ -11,12 +11,26 @@
 - Added `.github/workflows/release.yml`, a release workflow triggered by
   pushing a version tag (e.g. `0.8.0`); the tag becomes the package
   version (via `_msbuild.py`'s new `init_METADATA()`, matching the
-  convention used by `pymsbuild` itself). It builds the sdist/wheel in a
-  `build` job on Windows (required, since the native `_helper` extension
-  needs MSVC), then a separate `publish` job on Ubuntu downloads those
-  artifacts and publishes to PyPI using
-  [Trusted Publishers](https://docs.pypi.org/trusted-publishers/) (OIDC),
-  scoped to its own `pypi` GitHub Environment, rather than an API token.
+  convention used by `pymsbuild` itself). It builds the sdist in an
+  `sdist` job and the wheels in a `wheels` job on Windows (required,
+  since the native `_helper` extension needs MSVC), then a separate
+  `publish` job on Ubuntu downloads those artifacts and publishes to PyPI
+  using [Trusted Publishers](https://docs.pypi.org/trusted-publishers/)
+  (OIDC), scoped to its own `pypi` GitHub Environment, rather than an API
+  token.
+- Release wheels are now built for every supported Python version on both
+  `win_amd64` and `win_arm64` (ARM64 from 3.9, which is as far back as
+  CPython provides ARM64 builds). The headers and import libraries come
+  from the `python`/`pythonarm64` packages on nuget.org (see the new
+  `.github/actions/python-nuget` action), which are used to override
+  `PYMSBUILD_PYTHON_INCLUDES`, `PYMSBUILD_PYTHON_LIBS` and
+  `PYMSBUILD_WHEEL_TAG` so that a single x64 runner can cross-compile all
+  of them. The test workflow also cross-compiles a `win_arm64` wheel to
+  check that it still builds (it cannot be run on an x64 runner).
+- Fixed the Setup Configuration NuGet library directory used by
+  `_msbuild.py`: the package names its directories `x86`/`x64`/`arm64`,
+  which do not match the MSBuild `$(Platform)` values that were being
+  used, so the wheel platform tag is now mapped explicitly.
 
 ## 0.7.0
 
