@@ -66,7 +66,7 @@ def test_vs2017_known_paths_resolved():
 
 
 def test_vs2019_known_paths_resolved():
-    paths = _instance_paths((16, 11, 33));
+    paths = _instance_paths((16, 11, 33))
     assert paths['msbuild.exe']
     assert paths['cl.exe_x64']
 
