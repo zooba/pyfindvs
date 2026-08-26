@@ -133,9 +133,12 @@ def _ensure_setup_configuration_package():
                 for member in package.infolist():
                     destination = os.path.abspath(extract_dir / member.filename)
                     try:
-                        if os.path.commonpath((extract_root, destination)) != extract_root:
-                            raise ValueError
+                        is_within_extract_dir = (
+                            os.path.commonpath((extract_root, destination)) == extract_root
+                        )
                     except ValueError:
+                        is_within_extract_dir = False
+                    if not is_within_extract_dir:
                         raise RuntimeError("NuGet package contains an invalid path")
                     package.extract(member, extract_dir)
             os.replace(extract_dir, package_dir)
