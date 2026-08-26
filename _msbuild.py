@@ -112,7 +112,7 @@ def _ensure_setup_configuration_package():
         _SETUP_CONFIG_PACKAGE_NAME, _SETUP_CONFIG_PACKAGE_VERSION
     )
     if not package_dir.is_dir():
-        from io import BytesIO
+        from shutil import copyfileobj
         from tempfile import TemporaryDirectory
         from urllib.request import urlopen
         from zipfile import ZipFile
@@ -123,13 +123,18 @@ def _ensure_setup_configuration_package():
         print("Fetching {} from NuGet...".format(_SETUP_CONFIG_PACKAGE_NAME))
         packages_dir.mkdir(exist_ok=True)
         with urlopen(package_url) as response, TemporaryDirectory(dir=packages_dir) as temp_dir:
-            with ZipFile(BytesIO(response.read())) as package:
+            archive_path = Path(temp_dir) / "package.nupkg"
+            with archive_path.open("wb") as archive:
+                copyfileobj(response, archive)
+            with ZipFile(archive_path) as package:
                 extract_dir = Path(temp_dir) / package_dir.name
                 extract_dir.mkdir()
+                extract_root = os.path.abspath(extract_dir)
                 for member in package.infolist():
-                    destination = extract_dir / member.filename
+                    destination = os.path.abspath(extract_dir / member.filename)
                     try:
-                        destination.resolve().relative_to(extract_dir.resolve())
+                        if os.path.commonpath((extract_root, destination)) != extract_root:
+                            raise ValueError
                     except ValueError:
                         raise RuntimeError("NuGet package contains an invalid path")
                     package.extract(member, extract_dir)
