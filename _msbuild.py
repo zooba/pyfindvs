@@ -112,7 +112,7 @@ def _ensure_setup_configuration_package():
         _SETUP_CONFIG_PACKAGE_NAME, _SETUP_CONFIG_PACKAGE_VERSION
     )
     if not package_dir.is_dir():
-        from shutil import copyfileobj, move
+        from shutil import copyfileobj
         from tempfile import TemporaryDirectory
         from urllib.request import urlopen
         from zipfile import ZipFile
@@ -139,7 +139,6 @@ def _ensure_setup_configuration_package():
                         continue
                     if (
                         os.path.isabs(member_name)
-                        or parts[0] == ""
                         or (len(parts[0]) == 2 and parts[0][1] == ":")
                         or any(not part or part in (".", "..") for part in parts)
                     ):
@@ -152,9 +151,7 @@ def _ensure_setup_configuration_package():
                     destination.parent.mkdir(parents=True, exist_ok=True)
                     with package.open(member) as source, destination.open("wb") as target:
                         copyfileobj(source, target)
-            if package_dir.exists():
-                raise RuntimeError("NuGet package directory already exists")
-            move(str(extract_dir), str(package_dir))
+            extract_dir.rename(package_dir)
     if not package_dir.is_dir():
         raise RuntimeError("failed to acquire NuGet package {}".format(_SETUP_CONFIG_PACKAGE_NAME))
     return package_dir
