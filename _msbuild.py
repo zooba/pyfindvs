@@ -131,6 +131,8 @@ def _ensure_setup_configuration_package():
                 extract_dir.mkdir()
                 extract_root = os.path.abspath(extract_dir)
                 for member in package.infolist():
+                    if member.is_dir():
+                        continue
                     member_path = member.filename.replace("/", os.sep)
                     destination = os.path.abspath(os.path.join(extract_root, member_path))
                     try:
@@ -141,7 +143,9 @@ def _ensure_setup_configuration_package():
                         is_within_extract_dir = False
                     if not is_within_extract_dir:
                         raise RuntimeError("NuGet package contains an invalid path")
-                    package.extract(member, extract_dir)
+                    os.makedirs(os.path.dirname(destination), exist_ok=True)
+                    with package.open(member) as source, open(destination, "wb") as target:
+                        copyfileobj(source, target)
             extract_dir.rename(package_dir)
     if not package_dir.is_dir():
         raise RuntimeError("failed to acquire NuGet package {}".format(_SETUP_CONFIG_PACKAGE_NAME))
