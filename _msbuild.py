@@ -133,8 +133,15 @@ def _ensure_setup_configuration_package():
                 for member in package.infolist():
                     if member.is_dir():
                         continue
-                    member_path = member.filename.replace("/", os.sep)
-                    destination = (extract_root / member_path).resolve()
+                    member_name = member.filename.replace("\\", "/")
+                    parts = member_name.split("/")
+                    if (
+                        os.path.isabs(member_name)
+                        or (len(parts[0]) == 2 and parts[0][1] == ":")
+                        or any(not part or part in (".", "..") for part in parts)
+                    ):
+                        raise RuntimeError("NuGet package contains an invalid path")
+                    destination = extract_root.joinpath(*parts).resolve()
                     try:
                         destination.relative_to(extract_root)
                     except ValueError:
