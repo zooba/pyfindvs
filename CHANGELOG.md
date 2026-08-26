@@ -1,5 +1,22 @@
 # Changelog
 
+## Unreleased
+
+- Added `Programming Language :: Python :: 3.14` / `3.15` classifiers; the
+  test suite now runs against Python 3.8 through 3.15 in CI.
+- Added `.github/workflows/test.yml`, a build/test workflow that runs the
+  pytest suite (and exercises `pymsbuild`'s sdist/wheel build) across
+  Python 3.8-3.15 on Linux and Windows.
+- Added `.github/workflows/release.yml`, a release workflow triggered by
+  pushing a version tag (e.g. `0.8.0`); the tag becomes the package
+  version (via `_msbuild.py`'s new `init_METADATA()`, matching the
+  convention used by `pymsbuild` itself). It builds the sdist/wheel in a
+  `build` job on Windows (required, since the native `_helper` extension
+  needs MSVC), then a separate `publish` job on Ubuntu downloads those
+  artifacts and publishes to PyPI using
+  [Trusted Publishers](https://docs.pypi.org/trusted-publishers/) (OIDC),
+  scoped to its own `pypi` GitHub Environment, rather than an API token.
+
 ## 0.7.0
 
 - Added support for discovering Visual Studio 2019 (16.x), 2022 (17.x) and

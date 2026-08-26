@@ -51,11 +51,22 @@ METADATA = {
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
+        "Programming Language :: Python :: 3.15",
         "Programming Language :: Python :: 3 :: Only",
     ],
     "Requires-Python": ">=3.8",
     "Requires-Dist": [],
 }
+
+
+def init_METADATA():
+    # Releases are published from a tag push (see
+    # .github/workflows/release.yml), and the tag name becomes the
+    # package version -- same convention as pymsbuild's own _msbuild.py.
+    ghref = os.getenv("GITHUB_REF")
+    if ghref:
+        METADATA["Version"] = ghref.rpartition("/")[2]
 
 # Filled in for real (with the include/lib directories of the NuGet
 # package below) by init_PACKAGE, once we know whether we're building a

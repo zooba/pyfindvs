@@ -48,7 +48,14 @@ Visual Studio installation automatically; the `Microsoft.VisualStudio.Setup.Conf
 NuGet package (used to build the native `_helper` extension) is fetched automatically the
 first time you build.
 
-Requires Python 3.8 or later.
+Requires Python 3.8 or later (tested through 3.15).
+
+Releases are published to PyPI automatically by `.github/workflows/release.yml` whenever a
+tag matching `X.Y.Z` is pushed; the tag name becomes the package version. The sdist/wheel are
+built on Windows (a `build` job, since the native `_helper` extension needs MSVC), then
+published from a separate `publish` job on Ubuntu using
+[PyPI's Trusted Publisher](https://docs.pypi.org/trusted-publishers/) support (OIDC) rather
+than an API token, scoped to its own `pypi` GitHub Environment.
 
 Testing
 =======
