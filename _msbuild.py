@@ -108,26 +108,35 @@ _SETUP_CONFIG_PACKAGE_VERSION = "3.14.2075"
 
 def _ensure_setup_configuration_package():
     packages_dir = ROOT / "packages"
-    matches = sorted(packages_dir.glob(_SETUP_CONFIG_PACKAGE_NAME + "*"))
-    if not matches:
-        from subprocess import check_call
-        from urllib.request import urlretrieve
+    package_dir = packages_dir / "{}.{}".format(
+        _SETUP_CONFIG_PACKAGE_NAME, _SETUP_CONFIG_PACKAGE_VERSION
+    )
+    if not package_dir.is_dir():
+        from io import BytesIO
+        from tempfile import TemporaryDirectory
+        from urllib.request import urlopen
+        from zipfile import ZipFile
 
+        package_url = "https://www.nuget.org/api/v2/package/{}/{}".format(
+            _SETUP_CONFIG_PACKAGE_NAME, _SETUP_CONFIG_PACKAGE_VERSION
+        )
         print("Fetching {} from NuGet...".format(_SETUP_CONFIG_PACKAGE_NAME))
-        nuget = ROOT / "nuget.exe"
-        if not nuget.is_file():
-            urlretrieve("https://aka.ms/nugetclidl", filename=str(nuget))
-        check_call([
-            str(nuget), "install",
-            "-OutputDirectory", str(packages_dir),
-            "-Version", _SETUP_CONFIG_PACKAGE_VERSION,
-            _SETUP_CONFIG_PACKAGE_NAME,
-        ])
-        matches = sorted(packages_dir.glob(_SETUP_CONFIG_PACKAGE_NAME + "*"))
-    if not matches:
+        packages_dir.mkdir(exist_ok=True)
+        with urlopen(package_url) as response, TemporaryDirectory(dir=packages_dir) as temp_dir:
+            with ZipFile(BytesIO(response.read())) as package:
+                extract_dir = Path(temp_dir) / package_dir.name
+                extract_dir.mkdir()
+                for member in package.infolist():
+                    destination = extract_dir / member.filename
+                    try:
+                        destination.resolve().relative_to(extract_dir.resolve())
+                    except ValueError:
+                        raise RuntimeError("NuGet package contains an invalid path")
+                    package.extract(member, extract_dir)
+            os.replace(extract_dir, package_dir)
+    if not package_dir.is_dir():
         raise RuntimeError("failed to acquire NuGet package {}".format(_SETUP_CONFIG_PACKAGE_NAME))
-    # Highest version sorts last (matches setup.py's previous behaviour).
-    return matches[-1]
+    return package_dir
 
 
 def init_PACKAGE(tag=None):
