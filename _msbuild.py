@@ -141,7 +141,7 @@ def _ensure_setup_configuration_package():
                     if not is_within_extract_dir:
                         raise RuntimeError("NuGet package contains an invalid path")
                     package.extract(member, extract_dir)
-            os.replace(extract_dir, package_dir)
+            extract_dir.rename(package_dir)
     if not package_dir.is_dir():
         raise RuntimeError("failed to acquire NuGet package {}".format(_SETUP_CONFIG_PACKAGE_NAME))
     return package_dir
