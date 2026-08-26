@@ -72,6 +72,7 @@ for tool in ['cl.exe', 'link.exe', 'lib.exe']:
 # Retained for backwards compatibility with anything importing the old name.
 _VS2017_PATHS = _VS_PATHS
 
+
 def _get_known_paths(path, version_info, packages):
     if not path or not version_info or len(version_info) < 2:
         return {}
