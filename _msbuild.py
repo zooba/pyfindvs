@@ -136,12 +136,8 @@ def _ensure_setup_configuration_package():
                     member_path = member.filename.replace("/", os.sep)
                     destination = os.path.abspath(os.path.join(extract_root, member_path))
                     try:
-                        is_within_extract_dir = (
-                            os.path.commonpath((extract_root, destination)) == extract_root
-                        )
+                        Path(destination).relative_to(extract_root)
                     except ValueError:
-                        is_within_extract_dir = False
-                    if not is_within_extract_dir:
                         raise RuntimeError("NuGet package contains an invalid path")
                     os.makedirs(os.path.dirname(destination), exist_ok=True)
                     with package.open(member) as source, open(destination, "wb") as target:
