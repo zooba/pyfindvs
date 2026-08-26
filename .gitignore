@@ -79,3 +79,6 @@ __pycache__
 *.pyd
 *.dll
 *.egg-info/*
+.pytest_cache/
+*.dist-info/
+PKG-INFO
