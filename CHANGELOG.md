@@ -6,7 +6,8 @@
   test suite now runs against Python 3.8 through 3.15 in CI.
 - Added `.github/workflows/test.yml`, a build/test workflow that runs the
   pytest suite (and exercises `pymsbuild`'s sdist/wheel build) across
-  Python 3.8-3.15 on Linux and Windows.
+  Python 3.8-3.15 on Windows (the only platform the native `_helper`
+  extension can actually build/run on, so Ubuntu is not tested).
 - Added `.github/workflows/release.yml`, a release workflow triggered by
   pushing a version tag (e.g. `0.8.0`); the tag becomes the package
   version (via `_msbuild.py`'s new `init_METADATA()`, matching the
