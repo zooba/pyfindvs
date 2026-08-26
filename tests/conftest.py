@@ -36,18 +36,6 @@ if 'pyfindvs._helper' not in sys.modules:
         _stub.getversion = lambda path: None
         sys.modules['pyfindvs._helper'] = _stub
 
-# A minimal, always-present skeleton mirroring the real Windows registry
-# (HKLM\Software\Microsoft always exists), so that _find_vs2015/_find_winsdk
-# can be safely exercised without every test having to set this up. With
-# nothing else present, both report no instances found -- i.e. this is the
-# "nothing installed"/missing-metadata baseline. Tests add whatever extra
-# subkeys/values they need on top of this.
-BASE_REGISTRY_TREE = {
-    'HKEY_LOCAL_MACHINE': {'subkeys': {'Software': {'subkeys': {'Microsoft': {}}}}},
-    'HKEY_CURRENT_USER': {'subkeys': {'Software': {'subkeys': {'Microsoft': {}}}}},
-}
-
-
 @pytest.fixture(autouse=True)
 def fake_registry():
     """Resets the fake Windows registry to a minimal, empty-but-valid
