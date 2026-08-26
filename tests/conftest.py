@@ -11,8 +11,7 @@ the machine. So before anything imports ``pyfindvs``, we install minimal
 stand-ins for the native pieces:
 
 * ``pyfindvs._helper`` -- stubbed with no-op ``findall``/``getversion``.
-* ``winreg`` -- replaced with an in-memory fake (see ``fake_winreg.py``)
-  when the real module isn't importable.
+* ``winreg`` -- replaced with an in-memory fake (see ``fake_winreg.py``).
 
 Individual tests then monkeypatch these stand-ins (or the higher-level
 functions built on top of them) to describe whatever scenario they want
@@ -61,4 +60,3 @@ def fake_registry():
         yield fake_winreg.TREE
     finally:
         fake_winreg.reset()
-

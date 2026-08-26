@@ -16,13 +16,17 @@ def _fake_join_and_glob(base, pattern):
     return os.path.join(base, *pattern.split('\\')) if pattern else base
 
 
+def _drive_path(*parts):
+    return os.path.join('C:' + os.sep, *parts)
+
+
 def test_no_vs2015_installed_returns_empty(fake_registry):
     # Base registry has Software\Microsoft but nothing about VS2015.
     assert find_vs2015.findall() == []
 
 
 def test_vs2015_found_when_msenv_present(fake_registry, monkeypatch):
-    root = os.path.join('C:', 'Program Files (x86)', 'Microsoft Visual Studio 14.0')
+    root = _drive_path('Program Files (x86)', 'Microsoft Visual Studio 14.0')
 
     fake_registry['HKEY_LOCAL_MACHINE']['subkeys']['Software']['subkeys']['Microsoft']['subkeys'] = {
         'VisualStudio': {'subkeys': {'SxS': {'subkeys': {'VS7': {
@@ -63,7 +67,7 @@ def test_vs2015_missing_msbuild_subkey_does_not_crash(fake_registry, monkeypatch
     # Only the msenv.dll/devenv.exe key is present; MSBuild.ToolsVersions
     # and VC7 subkeys are entirely absent (as if a partial/repaired
     # install left the registry in an inconsistent state).
-    root = os.path.join('C:', 'VS2015')
+    root = _drive_path('VS2015')
     fake_registry['HKEY_LOCAL_MACHINE']['subkeys']['Software']['subkeys']['Microsoft']['subkeys'] = {
         'VisualStudio': {'subkeys': {'SxS': {'subkeys': {'VS7': {
             'values': {'14.0': (root, 1)},  # REG_SZ

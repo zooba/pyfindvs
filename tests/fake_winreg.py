@@ -95,10 +95,6 @@ def QueryValueEx(key, value_name):
 
 
 def install():
-    """Install this module as ``sys.modules['winreg']`` if a real one is
-    not already importable (i.e. we are not running on Windows)."""
+    """Install this module as ``sys.modules['winreg']``."""
     import sys
-    try:
-        import winreg  # noqa: F401
-    except ImportError:
-        sys.modules['winreg'] = sys.modules[__name__]
+    sys.modules['winreg'] = sys.modules[__name__]

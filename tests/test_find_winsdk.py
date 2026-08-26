@@ -11,12 +11,16 @@ def _fake_join_and_glob(base, pattern):
     return os.path.join(base, *pattern.split('\\')) if pattern else base
 
 
+def _drive_path(*parts):
+    return os.path.join('C:' + os.sep, *parts)
+
+
 def test_no_winsdk_installed_returns_empty(fake_registry):
     assert find_winsdk.findall() == []
 
 
 def test_winsdk_found_when_kitsroot_present(fake_registry, monkeypatch):
-    root = os.path.join('C:', 'Program Files (x86)', 'Windows Kits', '10') + os.sep
+    root = _drive_path('Program Files (x86)', 'Windows Kits', '10') + os.sep
 
     fake_registry['HKEY_LOCAL_MACHINE']['subkeys']['Software']['subkeys']['Microsoft']['subkeys'] = {
         'Windows Kits': {'subkeys': {'Installed Roots': {
@@ -42,7 +46,7 @@ def test_winsdk_missing_version_glob_returns_empty(fake_registry, monkeypatch):
     # (e.g. a corrupted/partial install with no headers directory) --
     # _join_and_glob would return '' for WinSDK_Version, so no instance
     # should be reported.
-    root = os.path.join('C:', 'Windows Kits', '10')
+    root = _drive_path('Windows Kits', '10')
     fake_registry['HKEY_LOCAL_MACHINE']['subkeys']['Software']['subkeys']['Microsoft']['subkeys'] = {
         'Windows Kits': {'subkeys': {'Installed Roots': {
             'values': {'KitsRoot10': (root, 1)},  # REG_SZ
