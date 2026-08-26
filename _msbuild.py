@@ -152,6 +152,8 @@ def _ensure_setup_configuration_package():
                     destination.parent.mkdir(parents=True, exist_ok=True)
                     with package.open(member) as source, destination.open("wb") as target:
                         copyfileobj(source, target)
+            if package_dir.exists():
+                raise RuntimeError("NuGet package directory already exists")
             move(str(extract_dir), str(package_dir))
     if not package_dir.is_dir():
         raise RuntimeError("failed to acquire NuGet package {}".format(_SETUP_CONFIG_PACKAGE_NAME))
