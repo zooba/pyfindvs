@@ -112,7 +112,7 @@ def _ensure_setup_configuration_package():
         _SETUP_CONFIG_PACKAGE_NAME, _SETUP_CONFIG_PACKAGE_VERSION
     )
     if not package_dir.is_dir():
-        from shutil import copyfileobj
+        from shutil import copyfileobj, move
         from tempfile import TemporaryDirectory
         from urllib.request import urlopen
         from zipfile import ZipFile
@@ -129,20 +129,20 @@ def _ensure_setup_configuration_package():
             with ZipFile(archive_path) as package:
                 extract_dir = Path(temp_dir) / package_dir.name
                 extract_dir.mkdir()
-                extract_root = os.path.abspath(extract_dir)
+                extract_root = extract_dir.resolve()
                 for member in package.infolist():
                     if member.is_dir():
                         continue
                     member_path = member.filename.replace("/", os.sep)
-                    destination = os.path.abspath(os.path.join(extract_root, member_path))
+                    destination = (extract_root / member_path).resolve()
                     try:
-                        Path(destination).relative_to(extract_root)
+                        destination.relative_to(extract_root)
                     except ValueError:
                         raise RuntimeError("NuGet package contains an invalid path")
-                    os.makedirs(os.path.dirname(destination), exist_ok=True)
-                    with package.open(member) as source, open(destination, "wb") as target:
+                    destination.parent.mkdir(parents=True, exist_ok=True)
+                    with package.open(member) as source, destination.open("wb") as target:
                         copyfileobj(source, target)
-            extract_dir.rename(package_dir)
+            move(str(extract_dir), str(package_dir))
     if not package_dir.is_dir():
         raise RuntimeError("failed to acquire NuGet package {}".format(_SETUP_CONFIG_PACKAGE_NAME))
     return package_dir
