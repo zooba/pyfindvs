@@ -36,6 +36,7 @@ if 'pyfindvs._helper' not in sys.modules:
         _stub.getversion = lambda path: None
         sys.modules['pyfindvs._helper'] = _stub
 
+
 @pytest.fixture(autouse=True)
 def fake_registry():
     """Resets the fake Windows registry to a minimal, empty-but-valid

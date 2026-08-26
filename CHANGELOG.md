@@ -32,7 +32,7 @@
   with a [`pymsbuild`](https://pypi.org/project/pymsbuild)-based build
   (`_msbuild.py`, `pyproject.toml`). `pip install .` / `pip wheel .` continue
   to work as before.
-- Modernized supported Python versions to 3.8-3.13 (`Requires-Python >=3.8`).
+- Modernized supported Python versions to 3.8-3.15 (`Requires-Python >=3.8`).
 - Updated package metadata (author/contact information).
 - Added a `tests/` package-independent unit test suite covering version
   parsing, known-path resolution (including VS2019/2022/2026), malformed or
