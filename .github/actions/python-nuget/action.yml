@@ -45,6 +45,7 @@ runs:
           $nupkg = "$dest.zip"
           Invoke-WebRequest "$feed/$package/$version/$package.$version.nupkg" -OutFile $nupkg
           Expand-Archive $nupkg -DestinationPath $dest
+          Remove-Item $nupkg
       }
       $abi = 'cp' + $env:PYFINDVS_PYTHON_VERSION.Replace('.', '')
       "PYMSBUILD_PYTHON_INCLUDES=$dest\tools\include" >> $env:GITHUB_ENV
