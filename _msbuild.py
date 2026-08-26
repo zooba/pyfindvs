@@ -141,8 +141,7 @@ def _ensure_setup_configuration_package():
                         os.path.isabs(member_name)
                         or parts[0] == ""
                         or (len(parts[0]) == 2 and parts[0][1] == ":")
-                        or any(not part or part in (".", "..") for part in parts[:-1])
-                        or parts[-1] in (".", "..")
+                        or any(not part or part in (".", "..") for part in parts)
                     ):
                         raise RuntimeError("NuGet package contains an invalid path")
                     destination = extract_root.joinpath(*parts).resolve()
