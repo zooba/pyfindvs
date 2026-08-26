@@ -64,9 +64,12 @@ def init_METADATA():
     # Releases are published from a tag push (see
     # .github/workflows/release.yml), and the tag name becomes the
     # package version -- same convention as pymsbuild's own _msbuild.py.
+    # Only apply this for an actual tag ref; ignore branch/PR refs (e.g.
+    # from the test workflow) so the version isn't silently overwritten
+    # with something like "master".
     ghref = os.getenv("GITHUB_REF")
-    if ghref:
-        METADATA["Version"] = ghref.rpartition("/")[2]
+    if ghref and ghref.startswith("refs/tags/"):
+        METADATA["Version"] = ghref[len("refs/tags/"):]
 
 # Filled in for real (with the include/lib directories of the NuGet
 # package below) by init_PACKAGE, once we know whether we're building a

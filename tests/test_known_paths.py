@@ -8,8 +8,9 @@ This is the piece that historically only understood Visual Studio 2017
 using the same glob-based, version-folder-agnostic templates.
 """
 
-import pyfindvs
+import unittest.mock
 
+import pyfindvs
 
 ALL_PACKAGES = frozenset(pyfindvs._PACKAGE_MAP.values())
 
@@ -53,7 +54,6 @@ def _instance_paths(version_info, packages=ALL_PACKAGES):
         'VC\\Tools\\MSVC\\*\\bin\\HostX86\\x86\\cl.exe': r'C:\VS\VC\Tools\MSVC\14.44\bin\HostX86\x86\cl.exe',
         'VC\\Tools\\MSVC\\*\\bin\\HostX64\\x64\\cl.exe': r'C:\VS\VC\Tools\MSVC\14.44\bin\HostX64\x64\cl.exe',
     }
-    import unittest.mock
     with unittest.mock.patch.object(pyfindvs, '_join_and_glob', _fake_join_and_glob(resolved)):
         return pyfindvs._get_known_paths(r'C:\VS', version_info, packages)
 

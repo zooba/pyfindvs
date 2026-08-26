@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    permissions:
+      contents: read
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
@@ -40,6 +42,7 @@ jobs:
       url: https://pypi.org/project/pyfindvs/
     permissions:
       id-token: write
+      contents: read
     steps:
     - name: Download build artifacts
       uses: actions/download-artifact@v4
